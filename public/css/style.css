@@ -1,0 +1,178 @@
+:root{
+  --bg0:#05030a;
+  --bg1:#0b0620;
+  --text:#e9e7ff;
+  --muted:rgba(233,231,255,.72);
+  --accent:#a855f7;
+  --accent2:#22d3ee;
+  --danger:#fb7185;
+  --card:rgba(15,10,30,.55);
+  --ring:rgba(168,85,247,.35);
+}
+
+html, body { height: 100%; }
+
+body{
+  background:
+    radial-gradient(1100px 600px at 20% -10%, rgba(168,85,247,.35), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(34,211,238,.25), transparent 55%),
+    radial-gradient(900px 650px at 30% 100%, rgba(251,113,133,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+.bg-arcane{
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-arcane::before,
+.bg-arcane::after{
+  z-index: 0;
+}
+
+.bg-arcane > *{
+  position: relative;
+  z-index: 1;
+}
+
+.bg-arcane::before{
+  content:"";
+  position:absolute;
+  inset:-220px;
+  background:
+    radial-gradient(circle at 30% 35%, rgba(168,85,247,.55), transparent 45%),
+    radial-gradient(circle at 70% 30%, rgba(34,211,238,.45), transparent 42%),
+    radial-gradient(circle at 50% 75%, rgba(251,113,133,.18), transparent 48%);
+  filter: blur(28px);
+  opacity:.55;
+  animation: drift 12s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.bg-arcane::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(rgba(255,255,255,.16) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity:.24;
+  mask-image: radial-gradient(circle at 50% 25%, rgba(0,0,0,1), rgba(0,0,0,.0) 66%);
+  pointer-events:none;
+}
+
+@keyframes drift{
+  0%{ transform: translate(0px, 0px) scale(1); }
+  50%{ transform: translate(42px, -28px) scale(1.03); }
+  100%{ transform: translate(0px, 0px) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .bg-arcane::before{ animation: none; }
+  .card-arcane{ transition: none !important; }
+}
+
+.navbar-glass{
+  background: rgba(10, 6, 22, .42);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(168,85,247,.12);
+}
+
+.text-glow{
+  text-shadow:
+    0 0 22px rgba(168,85,247,.35),
+    0 0 12px rgba(34,211,238,.20);
+}
+
+.muted{
+  color: var(--muted);
+}
+
+.btn-accent{
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: 0;
+  box-shadow:
+    0 10px 30px rgba(168,85,247,.25),
+    0 0 0 1px rgba(255,255,255,.05) inset;
+}
+
+.btn-accent:hover{
+  filter: brightness(1.05);
+}
+
+.btn-ghost{
+  border: 1px solid rgba(168,85,247,.30);
+  background: rgba(168,85,247,.08);
+  color: var(--text);
+}
+
+.btn-ghost:hover{
+  border-color: rgba(34,211,238,.45);
+  background: rgba(34,211,238,.10);
+}
+
+.card-arcane{
+  background: var(--card);
+  border: 1px solid rgba(168,85,247,.18);
+  box-shadow:
+    0 14px 40px rgba(0,0,0,.22),
+    0 0 0 1px rgba(34,211,238,.06) inset;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.card-arcane:hover{
+  transform: translateY(-2px);
+  border-color: rgba(34,211,238,.35);
+  background: rgba(18, 12, 38, .62);
+}
+
+.card-icon{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, rgba(168,85,247,.22), rgba(34,211,238,.12));
+  border: 1px solid rgba(168,85,247,.20);
+  color: rgba(233,231,255,.95);
+}
+
+.form-arcane .form-control,
+.form-arcane .form-select{
+  background: rgba(8, 5, 18, .35);
+  border: 1px solid rgba(168,85,247,.22);
+  color: var(--text);
+}
+
+.form-arcane .form-control:focus,
+.form-arcane .form-select:focus{
+  border-color: rgba(34,211,238,.45);
+  box-shadow: 0 0 0 .25rem rgba(34,211,238,.12);
+}
+
+.divider-glow{
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168,85,247,.55), rgba(34,211,238,.40), transparent);
+  opacity:.65;
+}
+
+.badge-arcane{
+  background: rgba(168,85,247,.12);
+  border: 1px solid rgba(168,85,247,.28);
+  color: var(--text);
+}
+
+.footer-links a{
+  color: rgba(233,231,255,.72);
+  text-decoration: none;
+}
+.footer-links a:hover{
+  color: rgba(233,231,255,.95);
+  text-decoration: underline;
+}
+
