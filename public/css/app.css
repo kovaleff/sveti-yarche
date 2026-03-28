@@ -193,7 +193,9 @@ body.light-theme .hero-overlay {
     padding: 2rem;
     text-align: center;
 }
-
+.testimonial-card.main {
+    width: 31%;
+}
 .testimonial-avatar {
     width: 80px;
     height: 80px;

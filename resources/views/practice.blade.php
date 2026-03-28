@@ -8,102 +8,22 @@
 @section('content')
     <div class="bg-arcane">
       <main>
-        <section id="practice" class="container py-5 py-lg-6">
-          <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
-            <div>
-              <h1 class="fw-bold text-glow mb-1">О практике</h1>
-              <p class="muted mb-0">Смысл рождается из тишины: без лишнего шума и давления.</p>
-            </div>
-            <div class="d-flex gap-2">
-              <span class="badge badge-arcane">
-                <i class="bi bi-magic me-1" aria-hidden="true"></i> Бережные ритуалы
-              </span>
-              <span class="badge badge-arcane">
-                <i class="bi bi-stars me-1" aria-hidden="true"></i> Смысл и память
-              </span>
-            </div>
+          <div class="container py-5 py-lg-6">
+              <div class="row g-5 align-items-center">
+                  <div class="col-md-6">
+                      <h2 class="display-5 fw-semibold mb-3">Энергия <span class="gold-text">Луны и камней</span></h2>
+                      <p>Мы используем древние техники: карты Таро, руны, астрологические карты и регрессивные практики. Каждая консультация — это уникальное путешествие в глубины вашего подсознания.</p>
+                      <ul class="list-unstyled mt-4">
+                          <li class="mb-2"><i class="bi bi-gem gold-text me-2"></i> Индивидуальные сеансы с кристаллами</li>
+                          <li class="mb-2"><i class="bi bi-moon gold-text me-2"></i> Лунные календари и ритуалы</li>
+                          <li class="mb-2"><i class="bi bi-tree gold-text me-2"></i> Родовая терапия и медитации</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6">
+                      <img src="/images/29-600x450.jpg" class="img-fluid rounded-4 shadow-lg" alt="Эзотерика">
+                  </div>
+              </div>
           </div>
-
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-book" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Библиотека символов</div>
-                    <div class="small muted">Символы + заметки о смыслах.</div>
-                  </div>
-                </div>
-                <div class="muted">Собирайте подсказки и интерпретации. Возвращайтесь, когда нужен знак.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-rss" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Лента кодекса</div>
-                    <div class="small muted">Новые записи в спокойном темпе.</div>
-                  </div>
-                </div>
-                <div class="muted">Как перелистывать страницы. Никакой суеты — только атмосфера.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-calendar-event" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Ритм практики</div>
-                    <div class="small muted">Напоминания по желанию.</div>
-                  </div>
-                </div>
-                <div class="muted">Настраивайте намерение на своих условиях. Мы делаем это деликатно.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-search" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Поиск по состоянию</div>
-                    <div class="small muted">Находите смысл по ощущениям.</div>
-                  </div>
-                </div>
-                <div class="muted">Ищите по темам, настроению и коротким подсказкам.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-bell" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Тихие уведомления</div>
-                    <div class="small muted">Только действительно важное.</div>
-                  </div>
-                </div>
-                <div class="muted">Узнавайте, когда появляется новое или обновляется архив.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Ответ себе</div>
-                    <div class="small muted">Красиво фиксируйте наблюдения.</div>
-                  </div>
-                </div>
-                <div class="muted">Снимки разговора с собой, чтобы видеть собственные узоры.</div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer class="container pb-5 pt-4">
