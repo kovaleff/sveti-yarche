@@ -6,20 +6,24 @@
   --accent:#a855f7;
   --accent2:#22d3ee;
   --danger:#fb7185;
-  --card:rgba(15,10,30,.55);
-  --ring:rgba(168,85,247,.35);
+  --card:rgba(15,10,30,.5);
+  --ring:rgba(168,85,247,.3);
 }
 
 html, body { height: 100%; }
 
 body{
   background:
-    radial-gradient(1100px 600px at 20% -10%, rgba(168,85,247,.35), transparent 60%),
+    radial-gradient(1100px 600px at 20% -100%, rgba(168,85,247,.35), transparent 60%),
     radial-gradient(900px 500px at 90% 10%, rgba(34,211,238,.25), transparent 55%),
     radial-gradient(900px 650px at 30% 100%, rgba(251,113,133,.12), transparent 55%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+#home{
+    background: url(/images/bg.jpg);
 }
 
 .bg-arcane{
@@ -116,9 +120,9 @@ body{
 .card-arcane{
   background: var(--card);
   border: 1px solid rgba(168,85,247,.18);
-  box-shadow:
-    0 14px 40px rgba(0,0,0,.22),
-    0 0 0 1px rgba(34,211,238,.06) inset;
+  /*box-shadow:*/
+  /*  0 14px 40px rgba(0,0,0,.22),*/
+  /*  0 0 0 1px rgba(34,211,238,.06) inset;*/
   border-radius: 18px;
   overflow: hidden;
   transition: transform .18s ease, border-color .18s ease, background .18s ease;

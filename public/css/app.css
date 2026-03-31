@@ -4,7 +4,7 @@
     --bg-primary: linear-gradient(145deg, #0a1428 0%, #071126 100%);
     --bg-secondary: linear-gradient(135deg, #0a1428 0%, #0c1735 100%);
     --bg-deep: #071126;
-    --bg-card: rgba(12, 23, 45, 0.75);
+    --bg-card: rgba(12, 23, 45, 0.5);
     --text-primary: #e8e6f0;
     --text-secondary: #b8af9a;
     --border-color: rgba(212, 175, 55, 0.3);

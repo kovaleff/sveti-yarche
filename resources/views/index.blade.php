@@ -461,7 +461,7 @@
 
             <section id="booking" class="container pb-5">
                 <div class="p-4 p-md-5 rounded-4"
-                     style="background: rgba(8,5,18,.25); border:1px solid rgba(34,211,238,.18);">
+                     style="background: rgba(8,5,18,0.4); border:1px solid rgba(34,211,238,1);">
                     <div class="row align-items-center g-4">
                         <div class="col-lg-6">
                             <h2 class="fw-bold text-glow mb-2">Запись</h2>
@@ -507,71 +507,7 @@
                         </div>
                     </div>
                 </div>
-
-
             </section>
-
-            {{--        <section id="reviews" class="container pb-5">--}}
-            {{--          <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-3">--}}
-            {{--            <div>--}}
-            {{--              <h2 class="fw-bold text-glow mb-1">Отзывы</h2>--}}
-            {{--              <p class="muted mb-0">Живые впечатления от практики.</p>--}}
-            {{--            </div>--}}
-            {{--          </div>--}}
-
-            {{--          <div class="row g-4">--}}
-            {{--            <div class="col-md-6 col-lg-4">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="d-flex align-items-start justify-content-between mb-2">--}}
-            {{--                  <div>--}}
-            {{--                    <div class="fw-semibold">Екатерина</div>--}}
-            {{--                    <div class="small muted">индивидуальная сессия</div>--}}
-            {{--                  </div>--}}
-            {{--                  <div class="text-warning" aria-label="5 stars">--}}
-            {{--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>--}}
-            {{--                  </div>--}}
-            {{--                </div>--}}
-            {{--                <div class="muted">--}}
-            {{--                  "После встречи стало легче формулировать намерение. Больше тишины внутри и меньше суеты снаружи."--}}
-            {{--                </div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-
-            {{--            <div class="col-md-6 col-lg-4">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="d-flex align-items-start justify-content-between mb-2">--}}
-            {{--                  <div>--}}
-            {{--                    <div class="fw-semibold">Николай</div>--}}
-            {{--                    <div class="small muted">групповая практика</div>--}}
-            {{--                  </div>--}}
-            {{--                  <div class="text-warning" aria-label="5 stars">--}}
-            {{--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>--}}
-            {{--                  </div>--}}
-            {{--                </div>--}}
-            {{--                <div class="muted">--}}
-            {{--                  "Очень понравился темп. Упражнения короткие, но дают заметный эффект в течение недели."--}}
-            {{--                </div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-
-            {{--            <div class="col-md-6 col-lg-4">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="d-flex align-items-start justify-content-between mb-2">--}}
-            {{--                  <div>--}}
-            {{--                    <div class="fw-semibold">Мария</div>--}}
-            {{--                    <div class="small muted">сопровождение</div>--}}
-            {{--                  </div>--}}
-            {{--                  <div class="text-warning" aria-label="5 stars">--}}
-            {{--                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>--}}
-            {{--                  </div>--}}
-            {{--                </div>--}}
-            {{--                <div class="muted">--}}
-            {{--                  "Практика помогла мне лучше понимать свои реакции и эмоциональные паттерны. Теперь чувствую себя более устойчиво."--}}
-            {{--                </div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-            {{--          </div>--}}
-            {{--        </section>--}}
         </main>
     </div>
 @endsection

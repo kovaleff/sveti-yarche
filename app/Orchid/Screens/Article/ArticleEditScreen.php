@@ -71,6 +71,9 @@ class ArticleEditScreen extends Screen
                         ->type('text')->vertical()->required()
                         ->title('Заголовок:'),
                     Quill::make('article.content')->title('Содержимое:'),
+                    Input::make('article.slug')
+                        ->type('text')->vertical()->required()
+                        ->title('Слаг:'),
                     Cropper::make('article.main-image')->targetRelativeUrl()
                         ->title('Картинка')
                         ->width(1000)
