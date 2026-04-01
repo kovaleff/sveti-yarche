@@ -13,5 +13,4 @@ class Service extends Model
     use HasFactory;
     use Attachable, AsSource;
     public $guarded = [];
-    //public $timestamps = false;
 }

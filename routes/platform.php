@@ -13,6 +13,8 @@ use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
 use App\Orchid\Screens\Service\ServiceEditScreen;
 use App\Orchid\Screens\Service\ServiceListScreen;
+use App\Orchid\Screens\Certificate\CertificateEditScreen;
+use App\Orchid\Screens\Certificate\CertificateListScreen;
 use App\Orchid\Screens\Social\SocialEditScreen;
 use App\Orchid\Screens\Social\SocialListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
@@ -121,5 +123,9 @@ Route::screen('/socials/create', SocialEditScreen::class)->name('back-socials.cr
 Route::screen('/meditations', MeditationListScreen::class)->name('back-meditations');
 Route::screen('/meditations/{meditation}/edit', MeditationEditScreen::class)->name('back-meditations.edit');
 Route::screen('/meditations/create', MeditationEditScreen::class)->name('back-meditations.create');
+
+Route::screen('/certificates', CertificateListScreen::class)->name('back-certificates');
+Route::screen('/certificates/{certificate}/edit', CertificateEditScreen::class)->name('back-certificates.edit');
+Route::screen('/certificates/create', CertificateEditScreen::class)->name('back-certificates.create');
 
 // Route::screen('idea', Idea::class, 'platform.screens.idea');

@@ -103,6 +103,11 @@ class PlatformProvider extends OrchidServiceProvider
                 ->route('back-meditations')
                 ->permission('platform.systems.roles')
                 ->divider(),
+            Menu::make(__('Сертификаты'))
+                ->icon('bs.task')
+                ->route('back-certificates')
+                ->permission('platform.systems.roles')
+                ->divider(),
 
         ];
     }

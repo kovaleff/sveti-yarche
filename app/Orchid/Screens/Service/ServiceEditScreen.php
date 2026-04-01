@@ -81,6 +81,7 @@ class ServiceEditScreen extends Screen
                         ->type('text')->vertical()->required()
                         ->title('Цена:'),
                     Switcher::make('service.is_per_hour')->title('За час?:')->sendTrueOrFalse(),
+                    Switcher::make('service.is_grouped')->title('В группе?:')->sendTrueOrFalse(),
                     Quill::make('service.price_desc')->title('Уточнение цены:'),
                     Cropper::make('service.image')->targetRelativeUrl()
                         ->title('Картинка')
