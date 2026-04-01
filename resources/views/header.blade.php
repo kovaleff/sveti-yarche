@@ -9,7 +9,7 @@
             </span>
             <div class="lh-1">
                 <div class="fw-semibold text-glow">Свети Ярче</div>
-                <div class="small muted">Эзотерика Миланы Соболевской</div>
+                <div class="small muted">Энергоцелитель Милана Соболевская</div>
             </div>
         </a>
 
@@ -22,7 +22,7 @@
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('home')  }}">Главная</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('practice') }}">О практике</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('services') }}">Услуги</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="{{ route('gallery') }}">Галерея</a></li>
+{{--                <li class="nav-item"><a class="nav-link text-light" href="{{ route('gallery') }}">Галерея</a></li>--}}
                 <li class="nav-item">
                     <a class="nav-link text-light active" aria-current="page" href="{{ url('/reviews') }}">Отзывы</a>
                 </li>

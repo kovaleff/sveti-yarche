@@ -11,7 +11,7 @@ class StoreSocialRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return auth()->check();
     }
 
     /**
@@ -22,7 +22,11 @@ class StoreSocialRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|string|max:255',
+            'hint' => 'nullable|string|max:255',
+            'link' => 'required|url|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'order' => 'nullable|integer|min:0',
         ];
     }
 }

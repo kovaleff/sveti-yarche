@@ -1,12 +1,12 @@
 :root{
   --bg0:#05030a;
   --bg1:#0b0620;
-  --text:#e9e7ff;
+  --text:#000;
   --muted:rgba(233,231,255,.72);
   --accent:#a855f7;
   --accent2:#22d3ee;
   --danger:#fb7185;
-  --card:rgba(15,10,30,.5);
+  --card: rgba(125, 98, 227, 0.5);
   --ring:rgba(168,85,247,.3);
 }
 
@@ -23,7 +23,7 @@ body{
 }
 
 #home{
-    background: url(/images/bg.jpg);
+    background: url(/images/bg.png);
 }
 
 .bg-arcane{
@@ -131,7 +131,7 @@ body{
 .card-arcane:hover{
   transform: translateY(-2px);
   border-color: rgba(34,211,238,.35);
-  background: rgba(18, 12, 38, .62);
+  background: rgba(105, 65, 239, 0.62);
 }
 
 .card-icon{

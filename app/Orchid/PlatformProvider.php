@@ -78,6 +78,11 @@ class PlatformProvider extends OrchidServiceProvider
                 ->permission('platform.systems.roles')
                 ->divider(),
 
+            Menu::make(__('СоцСети'))
+                ->icon('bs.task')
+                ->route('back-socials')
+                ->permission('platform.systems.roles')
+                ->divider(),
             Menu::make(__('Статьи'))
                 ->icon('bs.task')
                 ->route('back-articles')
@@ -91,6 +96,11 @@ class PlatformProvider extends OrchidServiceProvider
             Menu::make(__('Услуги'))
                 ->icon('bs.task')
                 ->route('back-services')
+                ->permission('platform.systems.roles')
+                ->divider(),
+            Menu::make(__('Медитации'))
+                ->icon('bs.task')
+                ->route('back-meditations')
                 ->permission('platform.systems.roles')
                 ->divider(),
 

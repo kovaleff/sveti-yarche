@@ -4,22 +4,17 @@ declare(strict_types=1);
 
 use App\Orchid\Screens\Article\ArticleEditScreen;
 use App\Orchid\Screens\Article\ArticleListScreen;
+use App\Orchid\Screens\Meditation\MeditationEditScreen;
+use App\Orchid\Screens\Meditation\MeditationListScreen;
 use App\Orchid\Screens\News\NewsListScreen;
-use App\Orchid\Screens\Examples\ExampleActionsScreen;
-use App\Orchid\Screens\Examples\ExampleCardsScreen;
-use App\Orchid\Screens\Examples\ExampleChartsScreen;
-use App\Orchid\Screens\Examples\ExampleFieldsAdvancedScreen;
-use App\Orchid\Screens\Examples\ExampleFieldsScreen;
-use App\Orchid\Screens\Examples\ExampleGridScreen;
-use App\Orchid\Screens\Examples\ExampleLayoutsScreen;
-use App\Orchid\Screens\Examples\ExampleScreen;
-use App\Orchid\Screens\Examples\ExampleTextEditorsScreen;
 use App\Orchid\Screens\News\NewsEditScreen;
 use App\Orchid\Screens\PlatformScreen;
 use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
 use App\Orchid\Screens\Service\ServiceEditScreen;
 use App\Orchid\Screens\Service\ServiceListScreen;
+use App\Orchid\Screens\Social\SocialEditScreen;
+use App\Orchid\Screens\Social\SocialListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
 use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
@@ -118,5 +113,13 @@ Route::screen('/news/create', NewsEditScreen::class)->name('back-news.create');
 Route::screen('/services', ServiceListScreen::class)->name('back-services');
 Route::screen('/services/{service}/edit', ServiceEditScreen::class)->name('back-services.edit');
 Route::screen('/services/create', ServiceEditScreen::class)->name('back-services.create');
+
+Route::screen('/socials', SocialListScreen::class)->name('back-socials');
+Route::screen('/socials/{social}/edit', SocialEditScreen::class)->name('back-socials.edit');
+Route::screen('/socials/create', SocialEditScreen::class)->name('back-socials.create');
+
+Route::screen('/meditations', MeditationListScreen::class)->name('back-meditations');
+Route::screen('/meditations/{meditation}/edit', MeditationEditScreen::class)->name('back-meditations.edit');
+Route::screen('/meditations/create', MeditationEditScreen::class)->name('back-meditations.create');
 
 // Route::screen('idea', Idea::class, 'platform.screens.idea');

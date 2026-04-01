@@ -9,6 +9,5 @@ use Orchid\Screen\AsSource;
 class Article extends Model
 {
     use Attachable, AsSource;
-    public $guarded = [];
-    use Attachable;
+    public $fillable = ['title','content','slug','main_image'];
 }

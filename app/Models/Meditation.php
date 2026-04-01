@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Orchid\Attachment\Attachable;
 use Orchid\Screen\AsSource;
 
-class Social extends Model
+class Meditation extends Model
 {
     /** @use HasFactory<\Database\Factories\SocialFactory> */
-    use HasFactory, Attachable, AsSource;
+    use Attachable, AsSource;
     public $timestamps = false;
-    public $guarded = [];
+
+    public $fillable   = ['title','content','order'];
 }

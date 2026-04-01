@@ -74,7 +74,7 @@ class ArticleEditScreen extends Screen
                     Input::make('article.slug')
                         ->type('text')->vertical()->required()
                         ->title('Слаг:'),
-                    Cropper::make('article.main-image')->targetRelativeUrl()
+                    Cropper::make('article.main_image')->targetRelativeUrl()
                         ->title('Картинка')
                         ->width(1000)
                         ->height(500),
