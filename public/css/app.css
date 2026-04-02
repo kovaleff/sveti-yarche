@@ -4,13 +4,17 @@
     --bg-primary: linear-gradient(145deg, #0a1428 0%, #071126 100%);
     --bg-secondary: linear-gradient(135deg, #0a1428 0%, #0c1735 100%);
     --bg-deep: #071126;
-    --bg-card: rgba(12, 23, 45, 0.5);
-    --text-primary: #e8e6f0;
+    --bg-card: --accent;
+    --text-primary: #112B31;
     --text-secondary: #b8af9a;
     --border-color: rgba(212, 175, 55, 0.3);
     --card-hover: rgba(18, 32, 60, 0.9);
     --navbar-bg: rgba(7, 17, 38, 0.96);
     --footer-bg: linear-gradient(180deg, #071126 0%, #030917 100%);
+    --block: rgba(34, 211, 238, .35);
+    --block-hover: rgba(34, 211, 238, 0.55);
+    --reviews: rgba(171, 232, 87, 0.35);
+    --reviews-hover: rgba(171, 232, 87, 0.55);
 }
 
 body.light-theme {
@@ -187,11 +191,14 @@ body.light-theme .hero-overlay {
 
 /* Карусель отзывов */
 .testimonial-card {
-    background: var(--bg-card);
+    background: var(--reviews);
     border: 1px solid var(--border-color);
     border-radius: 28px;
     padding: 2rem;
     text-align: center;
+}
+.testimonial-card:hover{
+    background: var(--reviews-hover);
 }
 .testimonial-card.main {
     width: 31%;
@@ -204,7 +211,14 @@ body.light-theme .hero-overlay {
     border: 3px solid #d4af37;
     margin-bottom: 1rem;
 }
-
+#booking{
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--block);
+}
+#booking:hover{
+    background: var(--block-hover);
+}
 .swiper-button-next,
 .swiper-button-prev {
     color: #d4af37;

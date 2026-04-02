@@ -25,17 +25,17 @@
                     <div class="">
                         <h4><i class="bi bi-telephone-fill gold-text"></i> Контакты</h4>
                         <hr>
-                        <p><i class="bi bi-whatsapp"></i> +7 (999) 123-45-67</p>
-                        <p><i class="bi bi-telegram"></i> @AuraMystica_help</p>
-                        <p><i class="bi bi-envelope"></i> info@auramystica.ru</p>
-                        <p><i class="bi bi-clock"></i> Пн-Вс: 10:00 - 21:00</p>
+                        <div class="d-flex">
+                            <div class="col"><i class="bi bi-whatsapp gold-text"></i> +7 (999) 123-45-67</div>
+                            <div class="col"><i class="bi bi-whatsapp gold-text"></i> +7 (999) 123-45-67</div>
+                            <div class="col"><i class="bi bi-envelope gold-text"></i> info@auramystica.ru</div>
+                            <div class="col"><i class="bi bi-clock gold-text"></i> Пн-Вс: 10:00 - 21:00</div>
+                            <div class="col"><i class="bi bi-telegram gold-text"></i> Пн-Вс: 10:00 - 21:00</div>
+                            <div class="col"><i class="bi bi-vk gold-text"></i> Пн-Вс: 10:00 - 21:00</div>
+                            <div class="col"><i class="bi bi-instagram gold-text"></i> Пн-Вс: 10:00 - 21:00</div>
+                        </div>
                         <hr>
                         <p class="fst-italic">"Возможны онлайн-консультации для клиентов из любых городов"</p>
-                        <div class="social-icons mt-3">
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                            <a href="#"><i class="bi bi-telegram"></i></a>
-                            <a href="#"><i class="bi bi-vk"></i></a>
-                        </div>
                     </div>            </div>
             </section>
         </main>

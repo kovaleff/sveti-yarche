@@ -1,13 +1,17 @@
 :root{
   --bg0:#05030a;
   --bg1:#0b0620;
-  --text:#000;
-  --muted:rgba(233,231,255,.72);
+  --text:#112B31;
+  --muted: #142a30;
   --accent:#a855f7;
   --accent2:#22d3ee;
   --danger:#fb7185;
-  --card: rgba(125, 98, 227, 0.5);
+  --card: rgba(25, 224, 234, 0.5);
   --ring:rgba(168,85,247,.3);
+    --block: rgba(34, 211, 238, .35);
+    --block-hover: rgba(34, 211, 238, 0.55);
+    --reviews: rgba(171, 232, 87, 0.35);
+    --reviews-hover: rgba(171, 232, 87, 0.55);
 }
 
 html, body { height: 100%; }
@@ -118,7 +122,7 @@ body{
 }
 
 .card-arcane{
-  background: var(--card);
+  background: var(--block);
   border: 1px solid rgba(168,85,247,.18);
   /*box-shadow:*/
   /*  0 14px 40px rgba(0,0,0,.22),*/
@@ -131,7 +135,7 @@ body{
 .card-arcane:hover{
   transform: translateY(-2px);
   border-color: rgba(34,211,238,.35);
-  background: rgba(105, 65, 239, 0.62);
+  background: var(--block-hover);
 }
 
 .card-icon{

@@ -2,14 +2,11 @@
     <div class="container py-2">
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url('/') }}" aria-label="Свети Ярче — главная">
             <span class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Символ Свети Ярче">
-                <path d="M12 2C8.13 6.2 6 9.3 6 12.2C6 16.6 8.95 20 12 20C15.05 20 18 16.6 18 12.2C18 9.3 15.87 6.2 12 2Z" stroke="currentColor" stroke-width="1.5" />
-                <path d="M8 13.2C9.2 14.8 10.6 15.6 12 15.6C13.4 15.6 14.8 14.8 16 13.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
+              <img src="/images/logo.png" class="img-fluid" alt="">
             </span>
             <div class="lh-1">
                 <div class="fw-semibold text-glow">Свети Ярче</div>
-                <div class="small muted">Энергоцелитель Милана Соболевская</div>
+                <div class="small gold-text">Энергоцелитель Милана Соболевская</div>
             </div>
         </a>
 
@@ -22,7 +19,6 @@
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('home')  }}">Главная</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('practice') }}">О практике</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('services') }}">Услуги</a></li>
-{{--                <li class="nav-item"><a class="nav-link text-light" href="{{ route('gallery') }}">Галерея</a></li>--}}
                 <li class="nav-item">
                     <a class="nav-link text-light active" aria-current="page" href="{{ url('/reviews') }}">Отзывы</a>
                 </li>

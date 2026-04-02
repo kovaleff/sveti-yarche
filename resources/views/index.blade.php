@@ -340,9 +340,8 @@
                 </div>
             </section>
 
-            <section id="booking" class="container pb-5">
-                <div class="p-4 p-md-5 rounded-4"
-                     style="background: rgba(8,5,18,0.4); border:1px solid rgba(34,211,238,1);">
+            <section id="booking" class="container mb-5">
+                <div class="p-4 p-md-5 rounded-4">
                     <div class="row align-items-center g-4">
                         <div class="col-lg-6">
                             <h2 class="fw-bold text-glow mb-2">Запись</h2>
@@ -363,28 +362,49 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <form class="form-arcane p-3 p-sm-4 rounded-4" action="{{ url('/booking') }}" method="post"
-                                  aria-label="Запись">
-                                @csrf
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="email" name="email" type="email"
-                                           placeholder="name@example.com" required/>
-                                    <label for="email">Email</label>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" name="username" placeholder="Ваше имя *" required="">
                                 </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control form-control-custom" name="phone" placeholder="+7 (999) 999-99-99"  pattern="[\+]7[\s\(\-]\d{3}[\s\)\-]\d{3}[\s\-]\d{2}[\s\-]\d{2} required">
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select form-control-custom" id="bookingService">
+                                        <option value="Астрология">Астрология</option>
+                                        <option value="Таро">Таро</option>
+                                        <option value="Рейки">Рейки</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="datetime-local" class="form-control form-control-custom flatpickr-input" name="datetobook">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-esoteric w-100 py-3"><i class="bi bi-calendar-check"></i> Записаться</button>
+                                </div>
+                            </div>
+{{--                            <form class="form-arcane p-3 p-sm-4 rounded-4" action="{{ url('/booking') }}" method="post"--}}
+{{--                                  aria-label="Запись">--}}
+{{--                                @csrf--}}
+{{--                                <div class="form-floating mb-3">--}}
+{{--                                    <input class="form-control" id="email" name="email" type="email"--}}
+{{--                                           placeholder="name@example.com" required/>--}}
+{{--                                    <label for="email">Email</label>--}}
+{{--                                </div>--}}
 
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" name="name" type="text" placeholder="Ваше имя"
-                                           maxlength="80"/>
-                                    <label for="name">Имя (необязательно)</label>
-                                </div>
+{{--                                <div class="form-floating mb-3">--}}
+{{--                                    <input class="form-control" id="name" name="name" type="text" placeholder="Ваше имя"--}}
+{{--                                           maxlength="80"/>--}}
+{{--                                    <label for="name">Имя (необязательно)</label>--}}
+{{--                                </div>--}}
 
-                                <button class="btn btn-accent w-100 py-3" type="submit">
-                                    <i class="bi bi-send-fill me-2" aria-hidden="true"></i> Отправить заявку
-                                </button>
-                                <div class="small muted mt-2">
-                                    Нажимая кнопку, вы соглашаетесь получить ответ по заявке.
-                                </div>
-                            </form>
+{{--                                <button class="btn btn-accent w-100 py-3" type="submit">--}}
+{{--                                    <i class="bi bi-send-fill me-2" aria-hidden="true"></i> Отправить заявку--}}
+{{--                                </button>--}}
+{{--                                <div class="small muted mt-2">--}}
+{{--                                    Нажимая кнопку, вы соглашаетесь получить ответ по заявке.--}}
+{{--                                </div>--}}
+{{--                            </form>--}}
                         </div>
                     </div>
                 </div>
