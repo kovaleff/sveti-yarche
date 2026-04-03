@@ -13,7 +13,10 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('services');
+        $services = Service::query()->orderBy('order')->get();
+        return view('services', [
+            'services' => $services
+        ]);
     }
 
 

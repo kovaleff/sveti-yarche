@@ -19,9 +19,8 @@
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('home')  }}">Главная</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('practice') }}">О практике</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('services') }}">Услуги</a></li>
-                <li class="nav-item">
-                    <a class="nav-link text-light active" aria-current="page" href="{{ url('/reviews') }}">Отзывы</a>
-                </li>
+                <li class="nav-item"><a class="nav-link text-light" href="{{ route('meditations') }}">Медитации</a></li>
+                <li class="nav-item"><a class="nav-link text-light active" aria-current="page" href="{{ url('/reviews') }}">Отзывы</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ url('/booking') }}">Запись</a></li>
             </ul>
         </div>

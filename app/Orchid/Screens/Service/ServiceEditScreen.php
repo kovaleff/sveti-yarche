@@ -80,6 +80,9 @@ class ServiceEditScreen extends Screen
                     Input::make('service.price')
                         ->type('text')->vertical()->required()
                         ->title('Цена:'),
+                    Input::make('service.order')
+                        ->type('number')->vertical()->required()
+                        ->title('Позиция:'),
                     Switcher::make('service.is_per_hour')->title('За час?:')->sendTrueOrFalse(),
                     Switcher::make('service.is_grouped')->title('В группе?:')->sendTrueOrFalse(),
                     Quill::make('service.price_desc')->title('Уточнение цены:'),

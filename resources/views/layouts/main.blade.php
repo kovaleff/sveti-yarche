@@ -17,8 +17,6 @@
         @include('../header')
         <main id="home">
             @yield('content')
-
-
             <section id="" class="container pb-5">
                 <div class="p-4 p-md-5 rounded-4"
                      style="background: rgba(8,5,18,0.4); border:1px solid rgba(34,211,238,1);">
