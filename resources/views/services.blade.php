@@ -20,83 +20,28 @@
           </div>
 
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            @foreach($services as $service)
             <div class="col">
-              <div class="card card-arcane h-100 p-4">
+              <div class="card card-service card-service-{{rand(1,10)}} h-100 p-4">
                 <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-person-lines-fill" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Индивидуальная сессия</div>
-                    <div class="small muted">Намерение, ритуал и персональная подсказка.</div>
-                  </div>
-                </div>
-                <div class="muted">Для тех, кто хочет ясности и бережной настройки под себя.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
+                  @if($service->is_grouped)
                   <div class="card-icon"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
                   <div>
                     <div class="fw-semibold">Групповая практика</div>
-                    <div class="small muted">Тихие упражнения и совместные наблюдения.</div>
+                    <div class="small muted">{{$service->title}}</div>
                   </div>
-                </div>
-                <div class="muted">Подходит, если вам важны ритм и поддержка участников.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-chat-square-text" aria-hidden="true"></i></div>
+                  @else
+                  <div class="card-icon"><i class="bi bi-person-lines-fill" aria-hidden="true"></i></div>
                   <div>
-                    <div class="fw-semibold">Сопровождение</div>
-                    <div class="small muted">Разбор, мягкая корректировка и напоминания.</div>
+                    <div class="fw-semibold">Индивидуальная сессия</div>
+                    <div class="small muted">{{$service->title}}</div>
                   </div>
+                  @endif
                 </div>
-                <div class="muted">Для последовательности без перегруза и спешки.</div>
+                <div class="muted">{!! $service->content !!}</div>
               </div>
             </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-bookmark-check-fill" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Карта практики</div>
-                    <div class="small muted">План на 4 недели: темы и задания.</div>
-                  </div>
-                </div>
-                <div class="muted">Когда нужно направление, но хочется сохранить естественность.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Разбор смысла</div>
-                    <div class="small muted">Интерпретации и вопросы для осознания.</div>
-                  </div>
-                </div>
-                <div class="muted">Если вы чувствуете, что "что-то было", но неясно что.</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card card-arcane h-100 p-4">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="card-icon"><i class="bi bi-calendar-heart" aria-hidden="true"></i></div>
-                  <div>
-                    <div class="fw-semibold">Настройка ритма</div>
-                    <div class="small muted">Гибкие напоминания без давления.</div>
-                  </div>
-                </div>
-                <div class="muted">Если у вас то тише, то громче — поможем удержать тон.</div>
-              </div>
-            </div>
+            @endforeach
           </div>
 
           <div class="mt-4">

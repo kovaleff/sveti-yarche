@@ -264,3 +264,13 @@ footer, header{
 .card-service-10{
     background: url('/images/bg/services/bg-10.png')
 }
+.main-article p{
+    margin-bottom: 0.3rem;
+}
+.nav-item{
+    font-size:1.1rem!important;
+    font-weight: bold;
+}
+.footer-slogan{
+    color: #FFF
+}

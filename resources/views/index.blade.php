@@ -3,7 +3,7 @@
 @section('title', 'Свети Ярче | Энергоцелитель Милана Соболевская')
 @section('content')
 {{--    <div class="bg-arcane">--}}
-            <section class="container py-5 py-lg-6">
+            <section class="container py-5 py-lg-6 main-article">
                 <div class="row align-items-stretch g-4 g-lg-5">
                     <div class="col-lg-6">
                         <div class="d-inline-flex align-items-center gap-2 badge badge-arcane px-3 py-2 mb-3">
@@ -93,48 +93,18 @@
                         <p class="lead">Что говорят те, кто уже открыл свой путь с нами</p>
                     </div>
                     <div class="row g-4">
+                        @foreach($reviews as $review)
                         <div class="col-lg-3">
                             <div class="testimonial-card testimonial-card-{{rand(1,10)}}">
-                                <img src="/images/users/4.jpg" alt="Михаил" class="testimonial-avatar">
-                                <h5 class="mt-3">Михаил П.</h5>
-                                <div class="gold-text mb-2">★★★★★</div>
-                                <p class="fst-italic">"Очень глубокий подход к эзотерике. Чувствуется мудрость и опыт.
-                                    Обязательно приду еще на кристаллотерапию!"</p>
+                                @if($review->photo)
+                                <img src="{{$review->photo}}" alt="{{$review->name}}" class="testimonial-avatar">
+                                @endif
+                                <h5 class="mt-3">{{$review->name}}</h5>
+                                <div class="gold-text mb-2">{{str_repeat('★', $review->stars)}}{{str_repeat('☆', 5 - $review->stars)}}</div>
+                                <p class="fst-italic">"{!! $review->review !!}"</p>
                             </div>
                         </div>
-
-                        <div class="col-lg-3">
-                            <div class="testimonial-card">
-                                <img src="/images/users/1.jpg" alt="Анна" class="testimonial-avatar">
-                                <h5 class="mt-3">Анна С.</h5>
-                                <div class="gold-text mb-2">★★★★★</div>
-                                <p class="fst-italic">"Благодаря консультации с Аурой я нашла ответы на вопросы, которые
-                                    мучили меня годами. Астрологическая карта открыла новые горизонты. Огромная
-                                    благодарность!"</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3">
-                            <div class="testimonial-card">
-                                <img src="/images/users/2.jpg" alt="Дмитрий" class="testimonial-avatar">
-                                <h5 class="mt-3">Дмитрий К.</h5>
-                                <div class="gold-text mb-2">★★★★★</div>
-                                <p class="fst-italic">"Сеанс Рейки помог восстановить энергию и обрести внутренний
-                                    покой. Очень рекомендую! Атмосфера и подход — выше всяких похвал."</p>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3">
-                            <div class="testimonial-card">
-                                <img src="/images/users/3.jpg" alt="Елена" class="testimonial-avatar">
-                                <h5 class="mt-3">Елена М.</h5>
-                                <div class="gold-text mb-2">★★★★★</div>
-                                <p class="fst-italic">"Таро раскрыло истинные причины проблем в отношениях. Теперь я
-                                    смотрю на жизнь иначе. Спасибо за профессионализм и душевность!"</p>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
 
 
