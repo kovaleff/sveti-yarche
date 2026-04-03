@@ -8,7 +8,7 @@
                     <div class="col-lg-6">
                         <div class="d-inline-flex align-items-center gap-2 badge badge-arcane px-3 py-2 mb-3">
                             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
-                            <span class="small fw-semibold">Эзотерика, но по-доброму</span>
+                            <span class="small fw-semibold">Эзотерика по-доброму</span>
                         </div>
                         <h2 class="fw-bold">
                             {{$main->title}}
