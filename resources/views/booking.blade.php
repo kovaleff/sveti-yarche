@@ -7,14 +7,13 @@
 
 @section('content')
     <div class="bg-arcane">
-      <main>
         <section class="container py-5 py-lg-6">
           <div class="p-4 p-md-5 rounded-4" style="background: rgba(8,5,18,.25); border:1px solid rgba(34,211,238,.18);">
             <div class="row align-items-center g-4">
               <div class="col-lg-6">
                 <h1 class="fw-bold text-glow mb-2">Запись</h1>
                 <p class="muted mb-4">
-                  Оставьте контакт — мы ответим и подскажем следующий шаг в записи.
+                  {{$bookingArticle->content}}
                 </p>
 
                 <div class="d-flex flex-wrap gap-3">
@@ -53,23 +52,6 @@
             </div>
           </div>
         </section>
-      </main>
-
-      <footer class="container pb-5 pt-4">
-        <div class="divider-glow mb-4"></div>
-        <div class="row g-4 align-items-center">
-          <div class="col-md-6">
-            <div class="fw-semibold">Свети Ярче</div>
-            <div class="small muted">Эзотерика Миланы Соболевской</div>
-          </div>
-          <div class="col-md-6 text-md-end footer-links">
-            <a class="me-3" href="{{ url('/services') }}">Услуги</a>
-            <a class="me-3" href="{{ url('/reviews') }}">Отзывы</a>
-            <a href="{{ url('/contacts') }}">Контакты</a>
-          </div>
-        </div>
-        <div class="small muted mt-3">© <span id="year">2026</span> Все права защищены. Свет внутри — наружу.</div>
-      </footer>
     </div>
 @endsection
 

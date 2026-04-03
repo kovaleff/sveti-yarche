@@ -1,12 +1,8 @@
 @extends('layouts.main')
 
-@section('title', 'Свети Ярче | Эзотерика Миланы Соболевской')
-
-@section('styles')
-@endsection
-
+@section('title', 'Свети Ярче | Энергоцелитель Милана Соболевская')
 @section('content')
-    <div class="bg-arcane">
+{{--    <div class="bg-arcane">--}}
         <main id="home">
             <section class="container py-5 py-lg-6">
                 <div class="row align-items-stretch g-4 g-lg-5">
@@ -15,17 +11,13 @@
                             <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
                             <span class="small fw-semibold">Эзотерика, но по-доброму</span>
                         </div>
-
                         <h2 class="fw-bold">
                             {{$main->title}}
                         </h2>
                         <p class="lead muted mt-3 mb-4">
                             {!! $main->content !!}
                         </p>
-
-
                     </div>
-
                     <div class="col-lg-6 d-flex flex-column justify-content-center">
                         <div class="card card-arcane mt-3">
                             <img src="{{$main->main_image}}" class="img-fluid rounded-4 shadow-lg" alt="Эзотерика">
@@ -50,31 +42,6 @@
                                 </div>
                             </div>
                         </div>
-
-{{--                        <div class="row g-3 mt-3">--}}
-{{--                            <div class="col-md-4">--}}
-{{--                                <div class="p-3 rounded-4"--}}
-{{--                                     style="background: rgba(8,5,18,.22); border:1px solid rgba(168,85,247,.16);">--}}
-{{--                                    <div class="fw-semibold text-glow"><span class="display-6">37</span><span--}}
-{{--                                            class="fs-6">%</span></div>--}}
-{{--                                    <div class="small muted">more mindful minutes</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-4">--}}
-{{--                                <div class="p-3 rounded-4"--}}
-{{--                                     style="background: rgba(8,5,18,.22); border:1px solid rgba(168,85,247,.16);">--}}
-{{--                                    <div class="fw-semibold text-glow"><span class="display-6">12</span></div>--}}
-{{--                                    <div class="small muted">sigil collections</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-4">--}}
-{{--                                <div class="p-3 rounded-4"--}}
-{{--                                     style="background: rgba(8,5,18,.22); border:1px solid rgba(168,85,247,.16);">--}}
-{{--                                    <div class="fw-semibold text-glow"><span class="display-6">∞</span></div>--}}
-{{--                                    <div class="small muted">room for wonder</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
                     </div>
                 </div>
             </section>
@@ -117,173 +84,8 @@
                             </div>
                         </div>
                     @endforeach
-{{--                    <div class="col">--}}
-{{--                        <div class="card card-arcane h-100 p-4">--}}
-{{--                            <div class="d-flex align-items-center gap-3 mb-3">--}}
-{{--                                <div class="card-icon"><i class="bi bi-person-lines-fill" aria-hidden="true"></i></div>--}}
-{{--                                <div>--}}
-{{--                                    <div class="fw-semibold">Индивидуальная сессия</div>--}}
-{{--                                    <div class="small muted">Намерение, ритуал и персональная подсказка.</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="muted">Для тех, кто хочет ясности и бережной настройки под себя.</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
 
-{{--                    <div class="col">--}}
-{{--                        <div class="card card-arcane h-100 p-4">--}}
-{{--                            <div class="d-flex align-items-center gap-3 mb-3">--}}
-{{--                                <div class="card-icon"><i class="bi bi-people-fill" aria-hidden="true"></i></div>--}}
-{{--                                <div>--}}
-{{--                                    <div class="fw-semibold">Групповая практика</div>--}}
-{{--                                    <div class="small muted">Тихие упражнения и совместные наблюдения.</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="muted">Подходит, если вам важны ритм и поддержка участников.</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="col">--}}
-{{--                        <div class="card card-arcane h-100 p-4">--}}
-{{--                            <div class="d-flex align-items-center gap-3 mb-3">--}}
-{{--                                <div class="card-icon"><i class="bi bi-chat-square-text" aria-hidden="true"></i></div>--}}
-{{--                                <div>--}}
-{{--                                    <div class="fw-semibold">Сопровождение</div>--}}
-{{--                                    <div class="small muted">Разбор, мягкая корректировка и напоминания.</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="muted">Для последовательности без перегруза и спешки.</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="col">--}}
-{{--                        <div class="card card-arcane h-100 p-4">--}}
-{{--                            <div class="d-flex align-items-center gap-3 mb-3">--}}
-{{--                                <div class="card-icon"><i class="bi bi-bookmark-check-fill" aria-hidden="true"></i>--}}
-{{--                                </div>--}}
-{{--                                <div>--}}
-{{--                                    <div class="fw-semibold">Карта практики</div>--}}
-{{--                                    <div class="small muted">План на 4 недели: темы и задания.</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="muted">Когда нужно направление, но хочется сохранить естественность.</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="col">--}}
-{{--                        <div class="card card-arcane h-100 p-4">--}}
-{{--                            <div class="d-flex align-items-center gap-3 mb-3">--}}
-{{--                                <div class="card-icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></div>--}}
-{{--                                <div>--}}
-{{--                                    <div class="fw-semibold">Разбор смысла</div>--}}
-{{--                                    <div class="small muted">Интерпретации и вопросы для осознания.</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="muted">Подходит, если вы чувствуете, что "что-то было", но неясно что.</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="col">--}}
-{{--                        <div class="card card-arcane h-100 p-4">--}}
-{{--                            <div class="d-flex align-items-center gap-3 mb-3">--}}
-{{--                                <div class="card-icon"><i class="bi bi-calendar-heart" aria-hidden="true"></i></div>--}}
-{{--                                <div>--}}
-{{--                                    <div class="fw-semibold">Настройка ритма</div>--}}
-{{--                                    <div class="small muted">Гибкие напоминания без давления.</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="muted">Если у вас то тише, то громче — поможем удержать тон.</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </section>
-{{--            <section id="gallery" class="py-5 animate-on-scroll animate-show">--}}
-{{--                <div class="container">--}}
-{{--                    <div class="text-center mb-5">--}}
-{{--                        <h2 class="display-5">Сакральное <span class="gold-text">пространство</span></h2>--}}
-{{--                        <p class="lead">Атмосфера наших ритуалов и практик</p>--}}
-{{--                    </div>--}}
-{{--                    <div class="row g-4">--}}
-{{--                        <div class="col-md-4 col-sm-6">--}}
-{{--                            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"--}}
-{{--                                 data-img="https://picsum.photos/id/42/800/600">--}}
-{{--                                <img src="/images/gallery/gal1.jpg" class="img-fluid rounded-4"--}}
-{{--                                     style="width:100%; height:250px; object-fit:cover;">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-4 col-sm-6">--}}
-{{--                            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"--}}
-{{--                                 data-img="https://picsum.photos/id/169/800/600">--}}
-{{--                                <img src="/images/gallery/gal2.jpg" class="img-fluid rounded-4"--}}
-{{--                                     style="width:100%; height:250px; object-fit:cover;">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-4 col-sm-6">--}}
-{{--                            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"--}}
-{{--                                 data-img="https://picsum.photos/id/20/800/600">--}}
-{{--                                <img src="/images/gallery/gal3.jpg" class="img-fluid rounded-4"--}}
-{{--                                     style="width:100%; height:250px; object-fit:cover;">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </section>--}}
-
-
-            {{--        <section id="gallery" class="container pb-5">--}}
-            {{--          <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-3">--}}
-            {{--            <div>--}}
-            {{--              <h2 class="fw-bold text-glow mb-1">Галерея</h2>--}}
-            {{--              <p class="muted mb-0">Фрагменты атмосферы: символы, ритуальные карточки, заметки.</p>--}}
-            {{--            </div>--}}
-            {{--          </div>--}}
-
-            {{--          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">--}}
-            {{--            <div class="col">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="card-icon"><i class="bi bi-gem" aria-hidden="true"></i></div>--}}
-            {{--                <div class="fw-semibold mt-3">Камень смысла</div>--}}
-            {{--                <div class="small muted">Точка внимания для ясных формулировок.</div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-            {{--            <div class="col">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="card-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>--}}
-            {{--                <div class="fw-semibold mt-3">Схема намерения</div>--}}
-            {{--                <div class="small muted">Как желание превращается в действие.</div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-            {{--            <div class="col">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="card-icon"><i class="bi bi-fire" aria-hidden="true"></i></div>--}}
-            {{--                <div class="fw-semibold mt-3">Тепло ритуала</div>--}}
-            {{--                <div class="small muted">Нагрев спокойствием — не спешкой.</div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-            {{--            <div class="col">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="card-icon"><i class="bi bi-book" aria-hidden="true"></i></div>--}}
-            {{--                <div class="fw-semibold mt-3">Страница кодекса</div>--}}
-            {{--                <div class="small muted">Коротко, точно и повторяемо.</div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-            {{--            <div class="col">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="card-icon"><i class="bi bi-stars" aria-hidden="true"></i></div>--}}
-            {{--                <div class="fw-semibold mt-3">Знак ночи</div>--}}
-            {{--                <div class="small muted">Маленький ответ в подходящее время.</div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-            {{--            <div class="col">--}}
-            {{--              <div class="card card-arcane h-100 p-4">--}}
-            {{--                <div class="card-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>--}}
-            {{--                <div class="fw-semibold mt-3">Безопасный тон</div>--}}
-            {{--                <div class="small muted">Мы за бережность и ясные границы.</div>--}}
-            {{--              </div>--}}
-            {{--            </div>--}}
-            {{--          </div>--}}
-{{--            </section>--}}
-
 
             <section id="testimonials" class="px-3">
                 <div class="container pb-5">
@@ -383,34 +185,12 @@
                                     <button type="submit" class="btn btn-esoteric w-100 py-3"><i class="bi bi-calendar-check"></i> Записаться</button>
                                 </div>
                             </div>
-{{--                            <form class="form-arcane p-3 p-sm-4 rounded-4" action="{{ url('/booking') }}" method="post"--}}
-{{--                                  aria-label="Запись">--}}
-{{--                                @csrf--}}
-{{--                                <div class="form-floating mb-3">--}}
-{{--                                    <input class="form-control" id="email" name="email" type="email"--}}
-{{--                                           placeholder="name@example.com" required/>--}}
-{{--                                    <label for="email">Email</label>--}}
-{{--                                </div>--}}
-
-{{--                                <div class="form-floating mb-3">--}}
-{{--                                    <input class="form-control" id="name" name="name" type="text" placeholder="Ваше имя"--}}
-{{--                                           maxlength="80"/>--}}
-{{--                                    <label for="name">Имя (необязательно)</label>--}}
-{{--                                </div>--}}
-
-{{--                                <button class="btn btn-accent w-100 py-3" type="submit">--}}
-{{--                                    <i class="bi bi-send-fill me-2" aria-hidden="true"></i> Отправить заявку--}}
-{{--                                </button>--}}
-{{--                                <div class="small muted mt-2">--}}
-{{--                                    Нажимая кнопку, вы соглашаетесь получить ответ по заявке.--}}
-{{--                                </div>--}}
-{{--                            </form>--}}
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-    </div>
+{{--    </div>--}}
 @endsection
 
 @section('scripts')
