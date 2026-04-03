@@ -62,6 +62,14 @@ class ArticleListScreen extends Screen
         return [
             Layout::table('articles', [
                 TD::make('title'),
+                TD::make('slug'),
+                TD::make('main_image')
+                    ->render(function (Article $article) {
+                        if ($article->main_image) {
+                            return '<img src="' . $article->main_image . '" alt="image" style="max-width: 50px; max-height: 50px;">';
+                        }
+                        return '—';
+                    }),
                 TD::make('Actions')
                     ->alignRight()->render(function (Article $article) {
                             return DropDown::make()
