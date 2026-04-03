@@ -10,7 +10,7 @@
     --text-secondary: #b8af9a;
     --border-color: rgba(212, 175, 55, 0.3);
     --card-hover: rgba(18, 32, 60, 0.9);
-    --navbar-bg: rgba(8, 66, 80, 0.96);
+    --navbar-bg: rgba(20, 68, 78, 0.96);
     --gold:#f4c004;
     --bg0:#05030a;
     --bg1:#0b0620;
@@ -57,14 +57,48 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
 }
 
 .testimonial-card {
-    background: var(--reviews);
-    border: 1px solid var(--border-color);
+    background-size: cover;
+    background-color: #eaf5e5 !important;
+    border: 1px solid var(--text-primary) !important;
     border-radius: 28px;
     padding: 2rem;
     text-align: center;
+
 }
+.testimonial-card-1 {
+    background-image:url('/images/bg/reviews/bg-1.png')
+}
+.testimonial-card-2 {
+    background-image:url('/images/bg/reviews/bg-2.png')
+}
+.testimonial-card-3 {
+    background-image:url('/images/bg/reviews/bg-3.png')
+}
+.testimonial-card-4 {
+    background-image:url('/images/bg/reviews/bg-4.png')
+}
+.testimonial-card-5 {
+    background-image:url('/images/bg/reviews/bg-5.png')
+}
+.testimonial-card-6 {
+    background-image:url('/images/bg/reviews/bg-6.png')
+}
+.testimonial-card-7 {
+    background-image:url('/images/bg/reviews/bg-7.png')
+}
+.testimonial-card-8 {
+    background-image:url('/images/bg/reviews/bg-8.png')
+}
+.testimonial-card-9 {
+    background-image:url('/images/bg/reviews/bg-9.png')
+}
+.testimonial-card-10 {
+    background-image:url('/images/bg/reviews/bg-10.png')
+}
+
+
 .testimonial-card:hover{
-    background: var(--reviews-hover);
+
 }
 .testimonial-avatar {
     width: 80px;
@@ -152,9 +186,10 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
     display:flex;
     align-items:center;
     justify-content:center;
-    background: linear-gradient(135deg, rgba(168,85,247,.22), rgba(34,211,238,.12));
-    border: 1px solid rgba(168,85,247,.20);
-    color: rgba(233,231,255,.95);
+    /*background: linear-gradient(135deg, rgba(168,85,247,.22), rgba(34,211,238,.12));*/
+    background: linear-gradient(135deg, var(--navbar-bg), #327c91);
+    border: var(--navbar-bg);
+    color: var(--gold);
 }
 
 .form-arcane .form-control,
@@ -193,4 +228,39 @@ footer, header{
 .footer-links a:hover{
     color: rgba(233,231,255,.95);
     text-decoration: underline;
+}
+.card-service{
+    background-size: cover!important;
+    border:1px solid var(--text-primary)!important;
+    background-color: #f4fffe !important;
+}
+.card-service-1{
+    background: url('/images/bg/services/bg-1.png')
+}
+.card-service-2{
+    background: url('/images/bg/services/bg-2.png')
+}
+.card-service-3{
+    background: url('/images/bg/services/bg-3.png')
+}
+.card-service-4{
+    background: url('/images/bg/services/bg-4.png')
+}
+.card-service-5{
+    background: url('/images/bg/services/bg-5.png')
+}
+.card-service-6{
+    background: url('/images/bg/services/bg-6.png')
+}
+.card-service-7{
+    background: url('/images/bg/services/bg-7.png')
+}
+.card-service-8{
+    background: url('/images/bg/services/bg-8.png')
+}
+.card-service-9{
+    background: url('/images/bg/services/bg-9.png')
+}
+.card-service-10{
+    background: url('/images/bg/services/bg-10.png')
 }

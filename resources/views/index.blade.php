@@ -61,7 +61,7 @@
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
                     @foreach($services as $service)
                         <div class="col">
-                            <div class="card card-arcane h-100 p-4">
+                            <div class="card card-service  card-service-{{rand(1,10)}} h-100 p-4">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                         @if($service->is_grouped)
                                             <div class="card-icon"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="row g-4">
                         <div class="col-lg-3">
-                            <div class="testimonial-card">
+                            <div class="testimonial-card testimonial-card-{{rand(1,10)}}">
                                 <img src="/images/users/4.jpg" alt="Михаил" class="testimonial-avatar">
                                 <h5 class="mt-3">Михаил П.</h5>
                                 <div class="gold-text mb-2">★★★★★</div>
