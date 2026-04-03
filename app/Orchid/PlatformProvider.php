@@ -79,33 +79,38 @@ class PlatformProvider extends OrchidServiceProvider
                 ->divider(),
 
             Menu::make(__('СоцСети'))
-                ->icon('bs.task')
+                ->icon('bs.share')
                 ->route('back-socials')
                 ->permission('platform.systems.roles')
                 ->divider(),
             Menu::make(__('Статьи'))
-                ->icon('bs.task')
+                ->icon('bs.file-richtext')
                 ->route('back-articles')
                 ->permission('platform.systems.roles')
                 ->divider(),
             Menu::make(__('Новости'))
-                ->icon('bs.task')
+                ->icon('bs.newspaper')
                 ->route('back-news')
                 ->permission('platform.systems.roles')
                 ->divider(),
             Menu::make(__('Услуги'))
-                ->icon('bs.task')
+                ->icon('bs.briefcase')
                 ->route('back-services')
                 ->permission('platform.systems.roles')
                 ->divider(),
             Menu::make(__('Медитации'))
-                ->icon('bs.task')
+                ->icon('bs.cloud')
                 ->route('back-meditations')
                 ->permission('platform.systems.roles')
                 ->divider(),
             Menu::make(__('Сертификаты'))
-                ->icon('bs.task')
+                ->icon('bs.award')
                 ->route('back-certificates')
+                ->permission('platform.systems.roles')
+                ->divider(),
+            Menu::make(__('Отзывы'))
+                ->icon('bs.chat-quote')
+                ->route('back-reviews')
                 ->permission('platform.systems.roles')
                 ->divider(),
 

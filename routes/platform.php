@@ -15,6 +15,8 @@ use App\Orchid\Screens\Service\ServiceEditScreen;
 use App\Orchid\Screens\Service\ServiceListScreen;
 use App\Orchid\Screens\Certificate\CertificateEditScreen;
 use App\Orchid\Screens\Certificate\CertificateListScreen;
+use App\Orchid\Screens\Review\ReviewEditScreen;
+use App\Orchid\Screens\Review\ReviewListScreen;
 use App\Orchid\Screens\Social\SocialEditScreen;
 use App\Orchid\Screens\Social\SocialListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
@@ -87,22 +89,6 @@ Route::screen('roles', RoleListScreen::class)
         ->parent('platform.index')
         ->push(__('Roles'), route('platform.systems.roles')));
 
-// Example...
-//Route::screen('example', ExampleScreen::class)
-//    ->name('platform.example')
-//    ->breadcrumbs(fn (Trail $trail) => $trail
-//        ->parent('platform.index')
-//        ->push('Example Screen'));
-
-//Route::screen('/examples/form/fields', ExampleFieldsScreen::class)->name('platform.example.fields');
-//Route::screen('/examples/form/advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
-//Route::screen('/examples/form/editors', ExampleTextEditorsScreen::class)->name('platform.example.editors');
-//Route::screen('/examples/form/actions', ExampleActionsScreen::class)->name('platform.example.actions');
-//
-//Route::screen('/examples/layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
-//Route::screen('/examples/grid', ExampleGridScreen::class)->name('platform.example.grid');
-//Route::screen('/examples/charts', ExampleChartsScreen::class)->name('platform.example.charts');
-//Route::screen('/examples/cards', ExampleCardsScreen::class)->name('platform.example.cards');
 
 Route::screen('/articles', ArticleListScreen::class)->name('back-articles');
 Route::screen('/articles/{article}/edit', ArticleEditScreen::class)->name('back-articles.edit');
@@ -127,5 +113,9 @@ Route::screen('/meditations/create', MeditationEditScreen::class)->name('back-me
 Route::screen('/certificates', CertificateListScreen::class)->name('back-certificates');
 Route::screen('/certificates/{certificate}/edit', CertificateEditScreen::class)->name('back-certificates.edit');
 Route::screen('/certificates/create', CertificateEditScreen::class)->name('back-certificates.create');
+
+Route::screen('/reviews', ReviewListScreen::class)->name('back-reviews');
+Route::screen('/reviews/{review}/edit', ReviewEditScreen::class)->name('back-reviews.edit');
+Route::screen('/reviews/create', ReviewEditScreen::class)->name('back-reviews.create');
 
 // Route::screen('idea', Idea::class, 'platform.screens.idea');
