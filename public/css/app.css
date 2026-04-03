@@ -11,7 +11,7 @@
     --border-color: rgba(212, 175, 55, 0.3);
     --card-hover: rgba(18, 32, 60, 0.9);
     --navbar-bg: rgba(8, 66, 80, 0.96);
-
+    --gold:#f4c004;
     --bg0:#05030a;
     --bg1:#0b0620;
     --text:#112B31;
@@ -28,12 +28,19 @@
     --reviews-hover: rgba(171, 232, 87, 0.55);
 }
 html, body { height: 100%; }
-
+.gold-text {
+    color: var(--gold);
+}
+.nav-item>a:hover{
+    color: var(--gold)!important;
+}
 .bg-arcane{
     position: relative;
     /*overflow: hidden;*/
 }
-
+#app{
+    min-height: 100vh;
+}
 body {
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     background: var(--bg-main);
@@ -47,9 +54,6 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
     color: var(--text-primary)!important;
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 0.02em;
-}
-.gold-text {
-    color: #d4af37;
 }
 
 .testimonial-card {

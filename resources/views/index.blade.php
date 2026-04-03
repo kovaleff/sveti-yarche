@@ -3,7 +3,6 @@
 @section('title', 'Свети Ярче | Энергоцелитель Милана Соболевская')
 @section('content')
 {{--    <div class="bg-arcane">--}}
-        <main id="home">
             <section class="container py-5 py-lg-6">
                 <div class="row align-items-stretch g-4 g-lg-5">
                     <div class="col-lg-6">
@@ -189,7 +188,6 @@
                     </div>
                 </div>
             </section>
-        </main>
 {{--    </div>--}}
 @endsection
 
