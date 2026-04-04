@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Fields\Cropper;
 use Orchid\Screen\Fields\Input;
+use Orchid\Screen\Fields\Picture;
 use Orchid\Screen\Fields\Upload;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Alert;
@@ -74,10 +75,8 @@ class ArticleEditScreen extends Screen
                     Input::make('article.slug')
                         ->type('text')->vertical()->required()
                         ->title('Слаг:'),
-                    Cropper::make('article.main_image')->targetRelativeUrl()
-                        ->title('Картинка')
-                        ->width(1000)
-                        ->height(500),
+                    Picture::make('article.main_image')->targetRelativeUrl()
+                        ->title('Картинка'),
                 Upload::make('article.attachments')
                     ->title('Другие файлы')
                 ]

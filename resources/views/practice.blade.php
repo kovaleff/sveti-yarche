@@ -7,19 +7,14 @@
 
 @section('content')
     <div class="bg-arcane">
-          <div class="container py-5 py-lg-6">
-              <div class="row g-5 align-items-center">
+          <div class="container pt-5">
+              <div class="row g-5 align-items-top">
                   <div class="col-md-6">
-                      <h2 class="display-5 fw-semibold mb-3">Энергия <span class="gold-text">Луны и камней</span></h2>
-                      <p>Мы используем древние техники: карты Таро, руны, астрологические карты и регрессивные практики. Каждая консультация — это уникальное путешествие в глубины вашего подсознания.</p>
-                      <ul class="list-unstyled mt-4">
-                          <li class="mb-2"><i class="bi bi-gem gold-text me-2"></i> Индивидуальные сеансы с кристаллами</li>
-                          <li class="mb-2"><i class="bi bi-moon gold-text me-2"></i> Лунные календари и ритуалы</li>
-                          <li class="mb-2"><i class="bi bi-tree gold-text me-2"></i> Родовая терапия и медитации</li>
-                      </ul>
+                      <h2 class="display-5 fw-semibold mb-3">{{$practice->title}}</span></h2>
+                      <p>{!! $practice->content !!}.</p>
                   </div>
                   <div class="col-md-6">
-                      <img src="/images/29-600x450.jpg" class="img-fluid rounded-4 shadow-lg" alt="Эзотерика">
+                      <img src="{{$practice->main_image}}" class="img-fluid rounded-4 shadow-lg" alt="Эзотерика">
                   </div>
               </div>
           </div>

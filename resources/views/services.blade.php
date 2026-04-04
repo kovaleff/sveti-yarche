@@ -19,10 +19,10 @@
             </div>
           </div>
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 ">
             @foreach($services as $service)
             <div class="col">
-              <div class="card card-service card-service-{{rand(1,10)}} h-100 p-4">
+              <div class="card card-service card-service-{{rand(1,10)}} h-100 p-4 justify-content-between">
                 <div class="d-flex align-items-center gap-3 mb-3">
                   @if($service->is_grouped)
                   <div class="card-icon"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
@@ -39,6 +39,7 @@
                   @endif
                 </div>
                 <div class="muted">{!! $service->content !!}</div>
+                <div class="fw-semibold">Стоимость: <span class="fw-bold">{{ $service->price }} </span> ₽</div>
               </div>
             </div>
             @endforeach

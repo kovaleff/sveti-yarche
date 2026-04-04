@@ -7,42 +7,43 @@
 
     <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-2 g-md-3 g-lg-4">
         <div class="col">
-            <div class="card card-arcane h-100 p-2 p-md-3 p-lg-4">
+            <div class="card card-arcane  p-2 p-md-3 p-lg-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
-                    <i class="bi bi-whatsapp fs-5 gold-text" aria-hidden="true"></i>
-                    <div class="fw-semibold">WhatsApp</div>
+                    <a href="https://wa.me/79180952330" class="link" target="_blank">
+                        <i class="bi bi-whatsapp fs-5 gold-text" aria-hidden="true"></i> <span class="">WhatsApp</span>
+                    </a>
                 </div>
-                <div class="small muted">+7 (999) 123-45-67</div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card card-arcane h-100 p-4">
+            <div class="card card-arcane  p-4">
+
                 <div class="d-flex align-items-center gap-2 mb-2">
-                    <i class="bi bi-telegram fs-5 gold-text" aria-hidden="true"></i>
-                    <div class="fw-semibold">Telegram</div>
+                    <a href="https://t.me/Sobol_Mil" class="link" target="_blank">
+                        <i class="bi bi-telegram fs-5 gold-text" aria-hidden="true"></i> <span class="">Telegram</span>
+                    </a>
                 </div>
-                <div class="small muted"><a href="https://t.me/Milana_Sobolevskaya" class="text-light text-decoration-none">@Milana_Sobolevskaya</a></div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card card-arcane h-100 p-4">
+            <div class="card card-arcane  p-4">
+
                 <div class="d-flex align-items-center gap-2 mb-2">
-                    <i class="bi bi-envelope-fill fs-5 gold-text" aria-hidden="true"></i>
-                    <div class="fw-semibold">Email</div>
+                    <a href="mailto:example@info@auramystica.ru" class="link" target="_blank">
+                        <i class="bi bi-envelope-fill fs-5 gold-text" aria-hidden="true"></i> <span class="">Email</span>
+                    </a>
                 </div>
-                <div class="small muted">info@auramystica.ru</div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card card-arcane h-100 p-4">
+            <div class="card card-arcane  p-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
                     <i class="bi bi-clock-fill fs-5 gold-text" aria-hidden="true"></i>
-                    <div class="fw-semibold">Режим работы</div>
+                    <div class="fw-semibold">Пн-Вс: 10:00 — 21:00</div>
                 </div>
-                <div class="small muted">Пн-Вс: 10:00 — 21:00</div>
             </div>
         </div>
     </div>

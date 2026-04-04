@@ -30,16 +30,6 @@
                                     <i class="bi bi-envelope-paper me-2" aria-hidden="true"></i> Записаться
                                 </a>
                             </div>
-                            <div class="d-flex flex-wrap gap-3 mt-4">
-                                <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-lock-fill text-info" aria-hidden="true"></i>
-                                    <span class="small muted">Без слежки. Только атмосфера.</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-shield-check text-warning" aria-hidden="true"></i>
-                                    <span class="small muted">Запись без лишнего шума.</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -49,7 +39,7 @@
                 <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap">
                     <div>
                         <h2 class="fw-bold text-glow mb-1">Услуги</h2>
-                        <p class="muted mb-0">Выберите формат: бережно подстроим практику под вас.</p>
+                        <p class="muted mb-0">Выберите формат: бережно подстроим практику под вас. <span><a class="badge badge-arcane" href="{{ url('/services') }}"> Все услуги</a></span> </p>
                     </div>
                     <div class="d-flex gap-2">
                         <span class="badge badge-arcane"><i class="bi bi-person-workspace me-1" aria-hidden="true"></i> Индивидуально</span>
@@ -78,8 +68,7 @@
                                         @endif
 
                                 </div>
-
-                                <div class="muted">{!!$service->content!!}</div>
+{{--                                <div class="muted">{!!$service->content!!}</div>--}}
                             </div>
                         </div>
                     @endforeach
@@ -89,7 +78,7 @@
             <section id="testimonials" class="px-3">
                 <div class="container pb-5">
                     <div class="col-md-6">
-                        <h2 class="display-6">Отзывы <span class="gold-text">наших клиентов</span></h2>
+                        <h2 class="display-7">Отзывы <span class="gold-text">наших клиентов</span></h2>
                         <p class="lead">Что говорят те, кто уже открыл свой путь с нами</p>
                     </div>
                     <div class="row g-4">
@@ -132,7 +121,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" id="booking-block">
                             <div class="card bg-transparent p-4 p-md-5">
                                 <form action="{{ route('make-booking') }}" method="POST" id="booking-form" class="form-arcane">
                                 @csrf
@@ -173,6 +162,7 @@
                                 </form>
                             </div>
                         </div>
+                        <div id="booking-done" class="col-lg-6" style="display: none"></div>
                     </div>
                 </div>
             </section>
@@ -180,4 +170,56 @@
 @endsection
 
 @section('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('booking-form');
+    const bookingBlock = document.getElementById('booking-block');
+    const bookingDone = document.getElementById('booking-done');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('#make-submit-button');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Отправка...';
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                bookingBlock.style.display = 'none';
+                bookingDone.style.display = 'block';
+                bookingDone.innerHTML = `
+                    <div class="card card-arcane p-4 p-md-5 text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <h3 class="fw-bold text-glow mb-2">Вы записаны!</h3>
+                        <p class="muted mb-4">${data.message}</p>
+                        <p class="small muted">Мы свяжемся с вами в ближайшее время для подтверждения.</p>
+                    </div>
+                `;
+            } else {
+                alert(data.message || 'Произошла ошибка.');
+            }
+        })
+        .catch(error => {
+            alert('Произошла ошибка при отправке формы.');
+            console.error(error);
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="bi bi-calendar-check me-2"></i> Записаться';
+        });
+    });
+});
+</script>
 @endsection

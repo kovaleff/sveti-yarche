@@ -20,6 +20,7 @@ class HomeController extends Controller
         ]);
     }
     function practice(){
-        return view('practice');
+        $practice = Article::query()->where('slug', 'practice-about')->firstOrFail();
+        return view('practice', ['practice' => $practice]);
     }
 }

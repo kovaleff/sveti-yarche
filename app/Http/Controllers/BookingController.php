@@ -17,7 +17,6 @@ class BookingController extends Controller
 
     function makeBooking(Request $request){
         try {
-            $a = $request->get('booking');
             $validated = $request->validate([
                 'booking_name' => 'required|string|max:255',
                 'booking_phone' => 'required|string|max:255',
@@ -32,9 +31,18 @@ class BookingController extends Controller
                 'booking_date' => $validated['booking_booking_date'] ?? null,
             ]);
 
+            if ($request->ajax() || $request->wantsJson()) {
+                return response()->json(['success' => true, 'message' => 'Вы успешно записались!']);
+            }
+
             return redirect()->back()->with('success', 'Вы успешно записались!');
         } catch (\Exception $e) {
             Log::error('Booking error: ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
+
+            if ($request->ajax() || $request->wantsJson()) {
+                return response()->json(['success' => false, 'message' => 'Произошла ошибка при записи.'], 500);
+            }
+
             return redirect()->back()->with('error', 'Произошла ошибка при записи. Попробуйте ещё раз.');
         }
     }

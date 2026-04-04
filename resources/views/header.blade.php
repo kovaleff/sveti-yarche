@@ -4,7 +4,7 @@
             <span class="card-icon" aria-hidden="true">
               <img src="/images/logo.png" class="img-fluid" alt="">
             </span>
-            <div class="lh-1">
+            <div class="lh-1.1">
                 <div class="fw-semibold text-glow">Свети Ярче</div>
                 <div class="small gold-text">Энергоцелитель Милана Соболевская</div>
             </div>

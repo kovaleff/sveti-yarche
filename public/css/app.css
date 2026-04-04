@@ -215,6 +215,7 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
     background: rgb(77 135 171);
     border: 1px solid rgb(33 73 108 / 78%);
     text-shadow: 1px 1px #256a81;
+    color: var(--gold) !important;
 }
 
 footer, header{
@@ -273,4 +274,12 @@ footer, header{
 }
 .footer-slogan{
     color: #FFF
+}
+h2.fw-bold{
+    line-height: 1.1!important;
+}
+.link{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-primary)
 }
