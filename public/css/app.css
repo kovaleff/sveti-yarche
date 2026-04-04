@@ -141,9 +141,11 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
     color: var(--muted);
 }
 .btn-accent{
-    background: linear-gradient(135deg, #f7c155, #766209);
-    border: 0;
-    box-shadow: 0 10px 30px rgb(113 97 22 / 25%), 0 0 0 1px rgba(255, 255, 255, .05) inset
+    background: linear-gradient(135deg, #d4edc9, #54a131);
+    border-color: #50a32b !important;
+    box-shadow: 0 10px 30px rgb(7 18 7 / 25%), 0 0 0 1px rgba(255, 255, 255, .05) inset;
+    color: #fff !important;
+    text-shadow: 1px 1px #326919;
 }
 
 .btn-accent:hover{
@@ -175,7 +177,7 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
 .card-arcane:hover{
     transform: translateY(-2px);
     border-color: rgba(34,211,238,.35);
-    background: var(--block-hover);
+    background: #F1F0EB;
 }
 
 .card-icon{
@@ -210,9 +212,9 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
 }
 
 .badge-arcane{
-    background: rgba(168,85,247,.12);
-    border: 1px solid rgba(168,85,247,.28);
-    color: var(--text);
+    background: rgb(77 135 171);
+    border: 1px solid rgb(33 73 108 / 78%);
+    text-shadow: 1px 1px #256a81;
 }
 
 footer, header{

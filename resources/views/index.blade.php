@@ -89,7 +89,7 @@
             <section id="testimonials" class="px-3">
                 <div class="container pb-5">
                     <div class="col-md-6">
-                        <h2 class="display-5">Отзывы <span class="gold-text">наших клиентов</span></h2>
+                        <h2 class="display-6">Отзывы <span class="gold-text">наших клиентов</span></h2>
                         <p class="lead">Что говорят те, кто уже открыл свой путь с нами</p>
                     </div>
                     <div class="row g-4">
