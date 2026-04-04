@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Booking;
+use App\Models\Service;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,10 @@ class BookingController extends Controller
     function index()
     {
         $bookingArticle = Article::query()->where('slug', 'booking')->first();
-        return view('booking', ['bookingArticle' => $bookingArticle]);
+        return view('booking', [
+            'bookingArticle' => $bookingArticle,
+            'services' => Service::all(),
+        ]);
     }
 
     function makeBooking(Request $request){

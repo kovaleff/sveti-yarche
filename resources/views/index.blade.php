@@ -162,7 +162,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div id="booking-done" class="col-lg-6" style="display: none"></div>
+                        <div id="booking-done" class="col-lg-6 d-none"></div>
                     </div>
                 </div>
             </section>
@@ -195,8 +195,9 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                bookingBlock.style.display = 'none';
-                bookingDone.style.display = 'block';
+                bookingBlock.classList.add('d-none');
+                bookingBlock.classList.remove('d-flex');
+                bookingDone.classList.remove('d-none');
                 bookingDone.innerHTML = `
                     <div class="card card-arcane p-4 p-md-5 text-center">
                         <div class="mb-3">
