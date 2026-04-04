@@ -133,26 +133,44 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control form-control-custom" name="username" placeholder="Ваше имя *" required="">
+                            <div class="card bg-transparent p-4 p-md-5">
+                                <form action="{{ route('make-booking') }}" method="POST" id="booking-form" class="form-arcane">
+                                @csrf
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="bi bi-person-fill me-1 text-muted"></i> Ваше имя *
+                                    </label>
+                                    <input type="text" class="form-control form-control-custom" name="booking.name" placeholder="Как к вам обращаться?" required>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control form-control-custom" name="phone" placeholder="+7 (999) 999-99-99"  pattern="[\+]7[\s\(\-]\d{3}[\s\)\-]\d{3}[\s\-]\d{2}[\s\-]\d{2} required">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="bi bi-telephone-fill me-1 text-muted"></i> Телефон
+                                    </label>
+                                    <input type="tel" class="form-control form-control-custom" name="booking.phone" placeholder="+7 (999) 999-99-99" pattern="[\d\+\-\(\)\s]+">
                                 </div>
-                                <div class="col-md-6">
-                                    <select class="form-select form-control-custom" id="bookingService">
-                                        <option value="Астрология">Астрология</option>
-                                        <option value="Таро">Таро</option>
-                                        <option value="Рейки">Рейки</option>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i class="bi bi-stars me-1 text-muted"></i> Услуга
+                                    </label>
+                                    <select class="form-select form-control-custom" id="bookingService" name="booking.id_service">
+                                        <option value="" disabled selected>Выберите услугу</option>
+                                        @isset($services)
+                                            @foreach($services as $service)
+                                                <option value="{{ $service->id }}">{{ $service->title }}</option>
+                                            @endforeach
+                                        @endisset
                                     </select>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="datetime-local" class="form-control form-control-custom flatpickr-input" name="datetobook">
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        <i class="bi bi-calendar-event-fill me-1 text-muted"></i> Дата и время
+                                    </label>
+                                    <input type="datetime-local" class="form-control form-control-custom flatpickr-input" name="booking.booking_date">
                                 </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-esoteric w-100 py-3"><i class="bi bi-calendar-check"></i> Записаться</button>
-                                </div>
+                                <button id="make-submit-button" type="submit" class="btn btn-esoteric btn-accent w-100 py-3 fs-5">
+                                    <i class="bi bi-calendar-check me-2"></i> Записаться
+                                </button>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -18,3 +18,4 @@ Route::get('meditations', [MeditationController::class, 'index'])->name('meditat
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('reviews', [ReviewsController::class, 'index'])->name('reviews');
 Route::get('booking', [BookingController::class, 'index'])->name('booking');
+Route::post('booking', [BookingController::class, 'makeBooking'])->name('make-booking');

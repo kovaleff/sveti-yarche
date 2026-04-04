@@ -17,6 +17,8 @@ use App\Orchid\Screens\Certificate\CertificateEditScreen;
 use App\Orchid\Screens\Certificate\CertificateListScreen;
 use App\Orchid\Screens\Review\ReviewEditScreen;
 use App\Orchid\Screens\Review\ReviewListScreen;
+use App\Orchid\Screens\Booking\BookingListScreen;
+use App\Orchid\Screens\Booking\BookingEditScreen;
 use App\Orchid\Screens\Social\SocialEditScreen;
 use App\Orchid\Screens\Social\SocialListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
@@ -117,5 +119,9 @@ Route::screen('/certificates/create', CertificateEditScreen::class)->name('back-
 Route::screen('/reviews', ReviewListScreen::class)->name('back-reviews');
 Route::screen('/reviews/{review}/edit', ReviewEditScreen::class)->name('back-reviews.edit');
 Route::screen('/reviews/create', ReviewEditScreen::class)->name('back-reviews.create');
+
+Route::screen('/bookings', BookingListScreen::class)->name('back-bookings');
+Route::screen('/bookings/{booking}/edit', BookingEditScreen::class)->name('back-bookings.edit');
+Route::screen('/bookings/create', BookingEditScreen::class)->name('back-bookings.create');
 
 // Route::screen('idea', Idea::class, 'platform.screens.idea');

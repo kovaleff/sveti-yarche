@@ -5,9 +5,9 @@
         </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-2 g-md-3 g-lg-4">
         <div class="col">
-            <div class="card card-arcane h-100 p-4">
+            <div class="card card-arcane h-100 p-2 p-md-3 p-lg-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
                     <i class="bi bi-whatsapp fs-5 gold-text" aria-hidden="true"></i>
                     <div class="fw-semibold">WhatsApp</div>

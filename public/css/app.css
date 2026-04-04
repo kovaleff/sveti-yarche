@@ -111,10 +111,11 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
 #booking{
     border: 1px solid var(--border-color);
     border-radius: 28px;
-    background: var(--block);
+    background-image: url('/images/bg/bookin-bg.jpeg');
+    background-size: cover;
 }
 #booking:hover{
-    background: var(--block-hover);
+    /*background: var(--block-hover);*/
 }
 
 .social-icons a {
@@ -140,11 +141,9 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
     color: var(--muted);
 }
 .btn-accent{
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    background: linear-gradient(135deg, #f7c155, #766209);
     border: 0;
-    box-shadow:
-        0 10px 30px rgba(168,85,247,.25),
-        0 0 0 1px rgba(255,255,255,.05) inset;
+    box-shadow: 0 10px 30px rgb(113 97 22 / 25%), 0 0 0 1px rgba(255, 255, 255, .05) inset
 }
 
 .btn-accent:hover{
@@ -194,15 +193,14 @@ h1, h2, h3, .logo-text, .nav-link, .card-title, .lead {
 
 .form-arcane .form-control,
 .form-arcane .form-select{
-    background: rgba(8, 5, 18, .35);
-    border: 1px solid rgba(168,85,247,.22);
+    border: ;: 1px solid rgba(168,85,247,.22);
     color: var(--text);
 }
 
 .form-arcane .form-control:focus,
 .form-arcane .form-select:focus{
-    border-color: rgba(34,211,238,.45);
-    box-shadow: 0 0 0 .25rem rgba(34,211,238,.12);
+    border-color: rgb(227 221 6 / 45%);
+    box-shadow: 0 0 0 .25rem rgb(219 184 26 / 12%);
 }
 
 .divider-glow{

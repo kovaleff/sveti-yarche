@@ -113,6 +113,11 @@ class PlatformProvider extends OrchidServiceProvider
                 ->route('back-reviews')
                 ->permission('platform.systems.roles')
                 ->divider(),
+            Menu::make(__('Записи'))
+                ->icon('bs.calendar-check')
+                ->route('back-bookings')
+                ->permission('platform.systems.roles')
+                ->divider(),
 
         ];
     }
