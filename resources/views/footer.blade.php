@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="small gold-text mt-3">
+        <div class="small gold-text mt-3 text-center ">
             © <span id="year">{{ date('Y') }}</span> Все права защищены. Свет внутри — наружу.
         </div>
     </div>

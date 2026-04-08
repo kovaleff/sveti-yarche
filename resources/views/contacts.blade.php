@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-2 g-md-3 g-lg-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
             <div class="card card-arcane  p-2 p-md-3 p-lg-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
@@ -15,10 +15,8 @@
                 </div>
             </div>
         </div>
-
         <div class="col">
             <div class="card card-arcane  p-4">
-
                 <div class="d-flex align-items-center gap-2 mb-2">
                     <a href="https://t.me/Sobol_Mil" class="link" target="_blank">
                         <i class="bi bi-telegram fs-5 gold-text" aria-hidden="true"></i> <span class="">Telegram</span>
@@ -26,18 +24,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="col">
-            <div class="card card-arcane  p-4">
-
-                <div class="d-flex align-items-center gap-2 mb-2">
-                    <a href="mailto:example@info@auramystica.ru" class="link" target="_blank">
-                        <i class="bi bi-envelope-fill fs-5 gold-text" aria-hidden="true"></i> <span class="">Email</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
         <div class="col">
             <div class="card card-arcane  p-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
