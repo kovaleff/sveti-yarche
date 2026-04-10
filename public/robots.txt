@@ -1,2 +1,13 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /password-reset
+Disallow: /api/
+Disallow: /storage/logs/
+Disallow: /*?sort=
+Disallow: /*?filter=
+
+Allow: /
+
+Sitemap: https://sveti-yarche.ru/sitemap.xml

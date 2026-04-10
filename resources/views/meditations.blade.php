@@ -1,8 +1,27 @@
 @extends('layouts.main')
 
-@section('title', 'Услуги | Свети Ярче')
+@section('title', 'Медитации | Свети Ярче - Групповые и индивидуальные практики')
+@section('meta_description', 'Медитации с Миланой Соболевской: индивидуальные и групповые практики. Откройте путь к внутренней гармонии и самопознанию через медитацию.')
+@section('og_type', 'website')
+@section('og_title', 'Медитации | Свети Ярче - Групповые и индивидуальные практики')
+@section('og_description', 'Медитации с Миланой Соболевской: индивидуальные и групповые практики для внутренней гармонии.')
+@section('canonical', url('/meditations'))
+@section('og_url', url('/meditations'))
 
-@section('styles')
+@section('structured_data')
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Медитации с Миланой Соболевской",
+  "description": "Индивидуальные и групповые медитативные практики",
+  "url": "{{ url('/meditations') }}",
+  "organizer": {
+    "@type": "Person",
+    "name": "Милана Соболевская"
+  }
+}
+</script>
 @endsection
 
 @section('content')

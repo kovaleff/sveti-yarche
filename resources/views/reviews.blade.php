@@ -1,8 +1,23 @@
 @extends('layouts.main')
 
-@section('title', 'Отзывы | Свети Ярче')
+@section('title', 'Отзывы | Свети Ярче - Мнения клиентов')
+@section('meta_description', 'Отзывы клиентов о практике энергоцелительства с Миланой Соболевской. Живые впечатления от индивидуальных и групповых сессий.')
+@section('og_type', 'website')
+@section('og_title', 'Отзывы | Свети Ярче - Мнения клиентов')
+@section('og_description', 'Отзывы клиентов о практике энергоцелительства с Миланой Соболевской.')
+@section('canonical', url('/reviews'))
+@section('og_url', url('/reviews'))
 
-@section('styles')
+@section('structured_data')
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@type": "ReviewPage",
+  "name": "Отзывы о практике Свети Ярче",
+  "description": "Живые впечатления от практики энергоцелительства",
+  "url": "{{ url('/reviews') }}"
+}
+</script>
 @endsection
 
 @section('content')

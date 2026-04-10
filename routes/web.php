@@ -9,13 +9,18 @@ use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\MeditationController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('practice', [HomeController::class, 'practice'])->name('practice');
+Route::get('contacts', [HomeController::class, 'contacts'])->name('contacts');
 Route::get('services', [ServiceController::class, 'index'])->name('services');
 Route::get('meditations', [MeditationController::class, 'index'])->name('meditations');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('reviews', [ReviewsController::class, 'index'])->name('reviews');
 Route::get('booking', [BookingController::class, 'index'])->name('booking');
 Route::post('booking', [BookingController::class, 'makeBooking'])->name('make-booking');
+
+// Sitemap
+Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');

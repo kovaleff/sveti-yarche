@@ -10,7 +10,8 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "opcodesio/log-viewer": "^3.24",
-        "orchid/platform": "^14.52"
+        "orchid/platform": "^14.52",
+        "spatie/laravel-sitemap": "^8.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.7",

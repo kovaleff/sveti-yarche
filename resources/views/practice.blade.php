@@ -1,8 +1,23 @@
 @extends('layouts.main')
 
-@section('title', 'О практике | Свети Ярче')
+@section('title', 'О практике | Свети Ярче - Энергоцелительство')
+@section('meta_description', 'Узнайте о практике энергоцелительства Миланы Соболевской. Подход, методы и философия энергоцелительства для духовного развития.')
+@section('og_type', 'website')
+@section('og_title', 'О практике | Свети Ярче - Энергоцелительство')
+@section('og_description', 'Узнайте о практике энергоцелительства Миланы Соболевской. Подход, методы и философия.')
+@section('canonical', url('/practice'))
+@section('og_url', url('/practice'))
 
-@section('styles')
+@section('structured_data')
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "О практике энергоцелительства",
+  "description": "Информация о практике энергоцелительства Миланы Соболевской",
+  "url": "{{ url('/practice') }}"
+}
+</script>
 @endsection
 
 @section('content')

@@ -1,6 +1,31 @@
 @extends('layouts.main')
 
 @section('title', 'Свети Ярче | Энергоцелитель Милана Соболевская')
+@section('meta_description', 'Энергоцелительство и эзотерические практики с Миланой Соболевской. Индивидуальные сессии, групповые медитации, целительство и духовное наставничество. Откройте свой путь к внутренней гармонии.')
+@section('og_type', 'website')
+@section('og_title', 'Свети Ярче | Энергоцелитель Милана Соболевская')
+@section('og_description', 'Энергоцелительство и эзотерические практики с Миланой Соболевской. Индивидуальные и групповые сессии.')
+@section('canonical', url('/'))
+@section('og_url', url('/'))
+
+@section('structured_data')
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Свети Ярче - Милана Соболевская",
+  "description": "Энергоцелительство и эзотерические практики",
+  "url": "{{ url('/') }}",
+  "image": "{{ asset('/images/og-default.jpg') }}",
+  "priceRange": "₽₽",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "RU"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 {{--    <div class="bg-arcane">--}}
             <section class="container py-5 py-lg-6 main-article">
@@ -55,10 +80,10 @@
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                         @if($service->is_grouped)
                                             <div class="card-icon"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
-                                        <div>
-                                            <div class="fw-semibold">Групповая практика</div>
-                                            <div class="small muted">{{$service->title}}</div>
-                                        </div>
+                                            <div>
+                                                <div class="fw-semibold">Групповая практика</div>
+                                                <div class="small muted">{{$service->title}}</div>
+                                            </div>
                                         @else
                                             <div class="card-icon"><i class="bi bi-person-lines-fill" aria-hidden="true"></i></div>
                                             <div>
@@ -66,7 +91,6 @@
                                                 <div class="small muted">{{$service->title}}</div>
                                             </div>
                                         @endif
-
                                 </div>
 {{--                                <div class="muted">{!!$service->content!!}</div>--}}
                             </div>
@@ -170,57 +194,5 @@
 @endsection
 
 @section('scripts')
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('booking-form');
-    const bookingBlock = document.getElementById('booking-block');
-    const bookingDone = document.getElementById('booking-done');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        const submitBtn = form.querySelector('#make-submit-button');
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Отправка...';
-
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                bookingBlock.classList.add('d-none');
-                bookingBlock.classList.remove('d-flex');
-                bookingDone.classList.remove('d-none');
-                bookingDone.innerHTML = `
-                    <div class="card card-arcane p-4 p-md-5 text-center">
-                        <div class="mb-3">
-                            <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
-                        </div>
-                        <h3 class="fw-bold text-glow mb-2">Вы записаны!</h3>
-                        <p class="muted mb-4">${data.message}</p>
-                        <p class="small muted">Мы свяжемся с вами в ближайшее время для подтверждения.</p>
-                    </div>
-                `;
-            } else {
-                alert(data.message || 'Произошла ошибка.');
-            }
-        })
-        .catch(error => {
-            alert('Произошла ошибка при отправке формы.');
-            console.error(error);
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="bi bi-calendar-check me-2"></i> Записаться';
-        });
-    });
-});
-</script>
+    <script src="{{ asset('/js/booking-form.js') }}"></script>
 @endsection

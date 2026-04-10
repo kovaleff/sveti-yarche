@@ -1,8 +1,38 @@
 @extends('layouts.main')
 
-@section('title', 'Услуги | Свети Ярче')
+@section('title', 'Услуги | Свети Ярче - Энергоцелительство')
+@section('meta_description', 'Услуги энергоцелительства: индивидуальные сессии и групповые практики. Выберите формат, который подойдет именно вам. Цены и описание услуг.')
+@section('og_type', 'website')
+@section('og_title', 'Услуги | Свети Ярче - Энергоцелительство')
+@section('og_description', 'Услуги энергоцелительства: индивидуальные сессии и групповые практики. Цены и описание.')
+@section('canonical', url('/services'))
+@section('og_url', url('/services'))
 
-@section('styles')
+@section('structured_data')
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Услуги энергоцелительства",
+  "description": "Индивидуальные и групповые практики энергоцелительства",
+  "url": "{{ url('/services') }}",
+  "itemListElement": [
+    @foreach($services as $index => $service)
+    {
+      "@type": "Service",
+      "position": {{ $index + 1 }},
+      "name": "{{ $service->title }}",
+      "description": "{{ strip_tags($service->content) }}",
+      "offers": {
+        "@type": "Offer",
+        "price": "{{ $service->price }}",
+        "priceCurrency": "RUB"
+      }
+    }@if(!$loop->last),@endif
+    @endforeach
+  ]
+}
+</script>
 @endsection
 
 @section('content')

@@ -23,4 +23,8 @@ class HomeController extends Controller
         $practice = Article::query()->where('slug', 'practice-about')->firstOrFail();
         return view('practice', ['practice' => $practice]);
     }
+
+    function contacts(){
+        return view('contacts-page');
+    }
 }

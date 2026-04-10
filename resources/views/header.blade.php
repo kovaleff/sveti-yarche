@@ -2,7 +2,7 @@
     <div class="container py-2">
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url('/') }}" aria-label="Свети Ярче — главная">
             <span class="card-icon" aria-hidden="true">
-              <img src="/images/logo.png" class="img-fluid" alt="">
+              <img src="/images/logo.png" class="img-fluid" alt="Логотип Свети Ярче">
             </span>
             <div class="lh-1.1">
                 <div class="fw-semibold text-glow">Свети Ярче</div>

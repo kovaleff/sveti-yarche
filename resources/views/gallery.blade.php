@@ -1,8 +1,23 @@
 @extends('layouts.main')
 
-@section('title', 'Галерея | Свети Ярче')
+@section('title', 'Галерея | Свети Ярче - Атмосфера практики')
+@section('meta_description', 'Галерея практики Свети Ярче: символы, карточки практики и заметки. Почувствуйте атмосферу энергоцелительства.')
+@section('og_type', 'website')
+@section('og_title', 'Галерея | Свети Ярче - Атмосфера практики')
+@section('og_description', 'Галерея практики Свети Ярче: символы, карточки и заметки.')
+@section('canonical', url('/gallery'))
+@section('og_url', url('/gallery'))
 
-@section('styles')
+@section('structured_data')
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Галерея практики Свети Ярче",
+  "description": "Фрагменты атмос практики: символы, карточки практики и заметки",
+  "url": "{{ url('/gallery') }}"
+}
+</script>
 @endsection
 
 @section('content')
