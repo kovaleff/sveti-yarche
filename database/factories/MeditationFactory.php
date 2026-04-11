@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Review>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Meditation>
  */
-class ReviewFactory extends Factory
+class MeditationFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,9 @@ class ReviewFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'review' => fake()->paragraph(),
-            'stars' => fake()->numberBetween(1, 5),
-            'photo' => null,
+            'title' => fake()->sentence(),
+            'content' => fake()->paragraphs(4, true),
+            'order' => fake()->numberBetween(1, 100),
         ];
     }
 }

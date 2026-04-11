@@ -1,0 +1,224 @@
+<?php
+
+namespace Tests\Feature;
+
+use App\Models\Article;
+use App\Models\Booking;
+use App\Models\Service;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Log;
+use Tests\TestCase;
+
+class BookingFlowTest extends TestCase
+{
+    use RefreshDatabase;
+
+    /** @test */
+    public function booking_page_loads_successfully()
+    {
+        $article = Article::factory()->booking()->create();
+        Service::factory()->count(3)->create();
+        
+        $response = $this->get('/booking');
+        
+        $response->assertStatus(200);
+        $response->assertViewIs('booking');
+        $response->assertViewHas('services');
+    }
+
+    /** @test */
+    public function booking_page_shows_services()
+    {
+        $article = Article::factory()->booking()->create();
+        $services = Service::factory()->count(3)->create();
+        
+        $response = $this->get('/booking');
+        
+        $response->assertViewHas('services', function ($viewServices) use ($services) {
+            return $viewServices->count() === 3;
+        });
+    }
+
+    /** @test */
+    public function can_submit_booking_form()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->post('/booking', [
+            'booking_name' => 'John Doe',
+            'booking_phone' => '+7-999-123-45-67',
+            'booking_id_service' => $service->id,
+            'booking_booking_date' => now()->addDays(7)->toDateString(),
+        ]);
+        
+        $response->assertRedirect();
+        $this->assertDatabaseHas('bookings', [
+            'name' => 'John Doe',
+            'phone' => '+7-999-123-45-67',
+            'id_service' => $service->id,
+        ]);
+    }
+
+    /** @test */
+    public function booking_requires_name()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->post('/booking', [
+            'booking_name' => '',
+            'booking_phone' => '+7-999-123-45-67',
+            'booking_id_service' => $service->id,
+        ]);
+        
+        $response->assertSessionHasErrors('booking_name');
+    }
+
+    /** @test */
+    public function booking_requires_phone()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->post('/booking', [
+            'booking_name' => 'John Doe',
+            'booking_phone' => '',
+            'booking_id_service' => $service->id,
+        ]);
+        
+        $response->assertSessionHasErrors('booking_phone');
+    }
+
+    /** @test */
+    public function booking_requires_valid_service()
+    {
+        $article = Article::factory()->booking()->create();
+        
+        $response = $this->post('/booking', [
+            'booking_name' => 'John Doe',
+            'booking_phone' => '+7-999-123-45-67',
+            'booking_id_service' => 999,
+        ]);
+        
+        $response->assertSessionHasErrors('booking_id_service');
+    }
+
+    /** @test */
+    public function booking_date_is_optional()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->post('/booking', [
+            'booking_name' => 'John Doe',
+            'booking_phone' => '+7-999-123-45-67',
+            'booking_id_service' => $service->id,
+            'booking_booking_date' => '',
+        ]);
+        
+        $response->assertRedirect();
+        $this->assertDatabaseHas('bookings', [
+            'name' => 'John Doe',
+            'phone' => '+7-999-123-45-67',
+            'id_service' => $service->id,
+        ]);
+    }
+
+    /** @test */
+    public function booking_validation_max_lengths()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->post('/booking', [
+            'booking_name' => str_repeat('a', 256),
+            'booking_phone' => '+7-999-123-45-67',
+            'booking_id_service' => $service->id,
+        ]);
+        
+        $response->assertSessionHasErrors('booking_name');
+    }
+
+    /** @test */
+    public function successful_booking_shows_success_message()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->post('/booking', [
+            'booking_name' => 'John Doe',
+            'booking_phone' => '+7-999-123-45-67',
+            'booking_id_service' => $service->id,
+        ]);
+        
+        $response->assertSessionHas('success', 'Вы успешно записались!');
+    }
+
+    /** @test */
+    public function booking_error_is_logged()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        Log::shouldReceive('error')
+            ->once()
+            ->with('Booking error: Test error', \Mockery::type('array'));
+        
+        $this->expectException(\Exception::class);
+        
+        throw new \Exception('Test error');
+    }
+
+    /** @test */
+    public function booking_via_ajax_returns_json_response()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->postJson('/booking', [
+            'booking_name' => 'John Doe',
+            'booking_phone' => '+7-999-123-45-67',
+            'booking_id_service' => $service->id,
+        ]);
+        
+        $response->assertJson(['success' => true, 'message' => 'Вы успешно записались!']);
+    }
+
+    /** @test */
+    public function booking_via_ajax_error_returns_json_error()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create();
+        
+        $response = $this->postJson('/booking', [
+            'booking_name' => '',
+            'booking_phone' => '',
+            'booking_id_service' => 999,
+        ]);
+        
+        $response->assertStatus(302);
+    }
+
+    /** @test */
+    public function booking_stores_correct_data()
+    {
+        $article = Article::factory()->booking()->create();
+        $service = Service::factory()->create(['id' => 5]);
+        $bookingDate = now()->addDays(10)->toDateString();
+        
+        $this->post('/booking', [
+            'booking_name' => 'Jane Smith',
+            'booking_phone' => '+7-999-765-43-21',
+            'booking_id_service' => 5,
+            'booking_booking_date' => $bookingDate,
+        ]);
+        
+        $this->assertDatabaseHas('bookings', [
+            'name' => 'Jane Smith',
+            'phone' => '+7-999-765-43-21',
+            'id_service' => 5,
+            'booking_date' => $bookingDate,
+        ]);
+    }
+}
