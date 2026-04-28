@@ -71,12 +71,14 @@ class ServiceEditScreen extends Screen
         return  [
             Layout::rows([
                     Input::make('service.title')
+                        ->required()
                         ->type('text')->vertical()->required()
                         ->title('Заголовок:'),
                     Input::make('service.slug')
+                        ->required()
                         ->type('text')->vertical()->required()
                         ->title('Слаг:'),
-                    Quill::make('service.content')->title('Содержимое:'),
+                    Quill::make('service.content')->required()->title('Содержимое:'),
                     Input::make('service.price')
                         ->type('text')->vertical()->required()
                         ->title('Цена:'),
