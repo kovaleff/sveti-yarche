@@ -18,6 +18,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('home')  }}">Главная</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('practice') }}">О практике</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="{{ route('help') }}">Чем можем помочь</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('services') }}">Услуги</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="{{ route('meditations') }}">Медитации</a></li>
                 <li class="nav-item"><a class="nav-link text-light active" aria-current="page" href="{{ url('/reviews') }}">Отзывы</a></li>

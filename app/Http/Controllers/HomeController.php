@@ -23,6 +23,10 @@ class HomeController extends Controller
         $practice = Article::query()->where('slug', 'practice-about')->firstOrFail();
         return view('practice', ['practice' => $practice]);
     }
+    function help(){
+        $help = Article::query()->where('slug', 'help')->firstOrFail();
+        return view('help', ['help' => $help]);
+    }
 
     function contacts(){
         return view('contacts-page');

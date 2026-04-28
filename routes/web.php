@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('practice', [HomeController::class, 'practice'])->name('practice');
+Route::get('help', [HomeController::class, 'help'])->name('help');
 Route::get('contacts', [HomeController::class, 'contacts'])->name('contacts');
 Route::get('services', [ServiceController::class, 'index'])->name('services');
 Route::get('meditations', [MeditationController::class, 'index'])->name('meditations');
