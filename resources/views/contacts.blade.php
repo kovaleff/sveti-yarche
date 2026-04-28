@@ -28,7 +28,7 @@
             <div class="card card-arcane  p-4">
                 <div class="d-flex align-items-center gap-2 mb-2">
                     <i class="bi bi-clock-fill fs-5 gold-text" aria-hidden="true"></i>
-                    <div class="fw-semibold">Пн-Вс: 10:00 — 21:00</div>
+                    <div class="fw-semibold">Пн-Птн: 10:00 — 18:00</div>
                 </div>
             </div>
         </div>
